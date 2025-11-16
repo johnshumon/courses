@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mlops-with-cloud/Untitled.md",
+                "file": "mlops-with-cloud/lab-assignment-network-namespace-simulation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "lab-assignment-network-namespace-simulation"
             }
           }
         ]
@@ -171,7 +171,7 @@
   "active": "a8183882fbfc84ec",
   "lastOpenFiles": [
     "mlops-with-cloud/lab-networking-namespaces.md",
-    "mlops-with-cloud/Untitled.md",
+    "mlops-with-cloud/lab-assignment-network-namespace-simulation.md",
     "mlops-with-cloud/Makefile.md",
     "Makefile.md",
     "mlops-with-cloud/lab-mlflow-autologging.md"
