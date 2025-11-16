@@ -2,7 +2,7 @@
 network namespaces in Linux allow for the creation of isolated network environments within a single host. This assignment will help you understand how to create and manage multiple network namespaces and connect them using bridges and routing.
 
 ### main objective
-Create a network simulation with two separate networks connected via a router using Linux network namespaces and bridges.
+create a network simulation with two separate networks connected via a router using Linux network namespaces and bridges.
 
 ### required components
 

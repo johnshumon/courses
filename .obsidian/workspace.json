@@ -170,6 +170,10 @@
   },
   "active": "a8183882fbfc84ec",
   "lastOpenFiles": [
+    "mlops-with-cloud/lab-solution-network-namespace-simulation.md",
+    "mlops-with-cloud/network-topology.md",
+    "mlops-with-cloud/Makefile",
+    "mlops-with-cloud/network-namespace-setup.sh",
     "mlops-with-cloud/lab-networking-namespaces.md",
     "mlops-with-cloud/lab-assignment-network-namespace-simulation.md",
     "mlops-with-cloud/Makefile.md",
