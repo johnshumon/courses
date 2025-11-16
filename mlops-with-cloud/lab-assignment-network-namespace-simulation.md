@@ -44,8 +44,9 @@ Create a network simulation with two separate networks connected via a router us
 	- verify full connectivity
 
 ### bonus challenge
-
-Implement your solution using either: •⁠ ⁠A bash script for automation •⁠ ⁠A Makefile for automated setup and teardown
+Implement your solution using either:
+- A bash script for automation
+- A Makefile for automated setup and teardown
 
 ### deliverables
 
