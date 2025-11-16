@@ -49,24 +49,23 @@ Implement your solution using either:
 - A Makefile for automated setup and teardown
 
 ### deliverables
-
-- Complete implementation (either manual commands or automation script)
-- Network diagram showing your topology
-- Documentation of:
+- complete implementation (either manual commands or automation script)
+- network diagram showing your topology
+- documentation of:
 	- IP addressing scheme
-	- Routing configuration
-	- Testing procedures and results
+	- routing configuration
+	- testing procedures and results
 
 ### technical requirements
-- All commands must be executed with root privileges
-- Solution must work on a standard Linux system
+- all commands must be executed with root privileges
+- solution must work on a standard Linux system
 
 ### evaluation criteria
-- Correct network topology implementation
-- Proper isolation between namespaces
-- Successful routing between networks
-- Code quality (if automation is implemented)
-- Documentation quality
+- correct network topology implementation
+- proper isolation between namespaces
+- successful routing between networks
+- code quality (if automation is implemented)
+- documentation quality
 
 ### note
-Remember to add a clean up function to clean your network namespaces and bridges after testing to avoid conflicts with other network configurations.
+remember to add a clean up function to clean your network namespaces and bridges after testing to avoid conflicts with other network configurations.
