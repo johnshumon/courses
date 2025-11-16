@@ -69,3 +69,16 @@ Implement your solution using either:
 
 ### note
 remember to add a clean up function to clean your network namespaces and bridges after testing to avoid conflicts with other network configurations.
+
+---
+
+### lab solution
+
+```sh
+
+```
+
+```makefile
+
+```
+
