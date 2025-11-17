@@ -77,11 +77,11 @@ remember to add a clean up function to clean your network namespaces and bridges
 
 #### IP addressing scheme
 
-- **Network 1 (br0)**: `192.168.10.0/24`
+- **Bridge 0 (br0)**: `192.168.10.0/24`
   - ns1: `192.168.10.2/24`
   - router (veth-r0): `192.168.10.1/24` (gateway)
 
-- **Network 2 (br1)**: `192.168.20.0/24`
+- **Bridge 1 (br1)**: `192.168.20.0/24`
   - ns2: `192.168.20.2/24`
   - router (veth-r1): `192.168.20.1/24` (gateway)
 
