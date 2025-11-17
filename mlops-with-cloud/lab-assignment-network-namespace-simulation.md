@@ -158,52 +158,52 @@ sudo ip link add v-rns2 type veth peer name v-rns2-br1
 # move one end of each pair into the namespaces
 #------------------------------------------------------------------------------
 # ns1 side
-sudo ip link set veth-ns1 netns ns1
+sudo ip link set v-ns1 netns ns1
 
 # ns2 side
-sudo ip link set veth-ns2 netns ns2
+sudo ip link set v-ns2 netns ns2
 
 # router side
-sudo ip link set veth-r0 netns router-ns
-sudo ip link set veth-r1 netns router-ns
+sudo ip link set v-rns1 netns router-ns
+sudo ip link set v-rns2 netns router-ns
 
 #------------------------------------------------------------------------------
 # connect the other ends to the bridges (root namespace)
 #------------------------------------------------------------------------------
-sudo ip link set veth-ns1-br master br0
-sudo ip link set veth-r0-br master br0
-sudo ip link set veth-ns2-br master br1
-sudo ip link set veth-r1-br master br1
+sudo ip link set v-ns1-br0 master br0
+sudo ip link set v-rns1-br0 master br0
+sudo ip link set v-ns2-br1 master br1
+sudo ip link set v-rns2-br1 master br1
 
 # bring these links up in root
-sudo ip link set veth-ns1-br up
-sudo ip link set veth-r0-br up
-sudo ip link set veth-ns2-br up
-sudo ip link set veth-r1-br up
+sudo ip link set v-ns1-br0 up
+sudo ip link set v-rns1-br0 up
+sudo ip link set v-ns2-br1 up
+sudo ip link set v-rns2-br1 up
 
 #------------------------------------------------------------------------------
 # configure IPs inside namespaces
 #------------------------------------------------------------------------------
-# ns1 (veth-ns1) on 192.168.10.0/24
-sudo ip netns exec ns1 ip addr add 192.168.10.2/24 dev veth-ns1
-sudo ip netns exec ns1 ip link set veth-ns1 up
+# ns1 (v-ns1) on 192.168.10.0/24
+sudo ip netns exec ns1 ip addr add 192.168.10.2/24 dev v-ns1
+sudo ip netns exec ns1 ip link set v-ns1 up
 sudo ip netns exec ns1 ip link set lo up
 sudo ip netns exec ns1 ip route add default via 192.168.10.1
 
-# ns2 (veth-ns2) on 192.168.20.0/24
-sudo ip netns exec ns2 ip addr add 192.168.20.2/24 dev veth-ns2
-sudo ip netns exec ns2 ip link set veth-ns2 up
+# ns2 (v-ns2) on 192.168.20.0/24
+sudo ip netns exec ns2 ip addr add 192.168.20.2/24 dev v-ns2
+sudo ip netns exec ns2 ip link set v-ns2 up
 sudo ip netns exec ns2 ip link set lo up
 sudo ip netns exec ns2 ip route add default via 192.168.20.1
 
 # router namespace: interface into br0 (192.168.10.0/24) and br1 (192.168.20.0/24)
-sudo ip netns exec router-ns ip addr add 192.168.10.1/24 dev veth-r0
-sudo ip netns exec router-ns ip addr add 192.168.20.1/24 dev veth-r1
-sudo ip netns exec router-ns ip link set veth-r0 up
-sudo ip netns exec router-ns ip link set veth-r1 up
+sudo ip netns exec router-ns ip addr add 192.168.10.1/24 dev v-rns1-br0
+sudo ip netns exec router-ns ip addr add 192.168.20.1/24 dev v-rns2-br1
+sudo ip netns exec router-ns ip link set v-rns1-br0 up
+sudo ip netns exec router-ns ip link set v-rns2-br1 up
 sudo ip netns exec router-ns ip link set lo up
 
-# enable IP forwarding INSIDE the router namespace (critical for routing between subnets)
+# enable IP forwarding INSIDE the router namespace
 sudo ip netns exec router-ns sysctl -w net.ipv4.ip_forward=1
 
 #------------------------------------------------------------------------------
