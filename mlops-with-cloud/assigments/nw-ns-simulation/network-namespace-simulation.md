@@ -87,6 +87,13 @@ remember to add a clean up function to clean your network namespaces and bridges
 
 #### network topology
 
+![network topology](./network-namespace-simulation.png)
+
+#### running instructions
+
+- 
+
+##### manual commands
 ```sh
 #!/bin/bash
 # manual commands
@@ -238,6 +245,7 @@ sudo iptables -D FORWARD -o br0 -j ACCEPT 2>/dev/null || true
 sudo iptables -D FORWARD -o br1 -j ACCEPT 2>/dev/null || true
 ```
 
+##### makefile
 ```makefile
 # Makefile for network namespace simulation
 .PHONY: setup verify ping clean help
@@ -361,6 +369,7 @@ clean:
 	@echo "✓ Cleanup complete"
 ```
 
+##### automated bash script
 ```sh
 #!/bin/bash
 

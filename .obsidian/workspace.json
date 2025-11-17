@@ -168,8 +168,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c0360efe476d713e",
+  "active": "a8183882fbfc84ec",
   "lastOpenFiles": [
+    "mlops-with-cloud/assigments/nw-ns-simulation/network-namespace-simulation.png",
+    "mlops-with-cloud/assigments/nw-ns-simulation/networking-namespaces-simulation.png",
     "mlops-with-cloud/lab-networking-namespaces.md",
     "mlops-with-cloud/assigments/nw-ns-simulation/network-topology.md",
     "mlops-with-cloud/assigments/nw-ns-simulation/network-namespace-simulation.md",
