@@ -76,40 +76,16 @@ remember to add a clean up function to clean your network namespaces and bridges
 ### lab solution
 
 #### IP addressing scheme
+
 - **Network 1 (br0)**: `192.168.10.0/24`
   - ns1: `192.168.10.2/24`
   - router (veth-r0): `192.168.10.1/24` (gateway)
+
 - **Network 2 (br1)**: `192.168.20.0/24`
   - ns2: `192.168.20.2/24`
   - router (veth-r1): `192.168.20.1/24` (gateway)
 
 #### network topology
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        Root Namespace                       │
-│                                                             │
-│  ┌──────────────────────┐      ┌──────────────────────┐     │
-│  │   Bridge br0         │      │   Bridge br1         │     │
-│  │  (192.168.10.0/24)   │      │  (192.168.20.0/24)   │     │
-│  └──────────────────────┘      └──────────────────────┘     │
-│           │                              │                  │
-│      ┌────┴────┐                    ┌────┴────┐             │
-│      │         │                    │         │             │
-└──────┼─────────┼────────────────────┼─────────┼─────────────┘
-       │         │                    │         │
-   veth-ns1  veth-r0            veth-r1  veth-ns2
-       │         │                    │         │
-┌──────┴─────┐   │              ┌─────┴─────────┴─────┐
-│   ns1      │   │              │   router-ns          │
-│ 192.168.10.2│  └──────────────┤ 192.168.10.1        │
-└────────────┘                  │ 192.168.20.1        │
-                                └─────────────────────┘
-                                          │
-                                    ┌─────┴─────┐
-                                    │   ns2     │
-                                    │192.168.20.2│
-                                    └───────────┘
-```
 
 ```sh
 #!/bin/bash
@@ -251,22 +227,15 @@ echo "✓ All connectivity tests completed"
 #------------------------------------------------------------------------------
 # cleanup function
 #------------------------------------------------------------------------------
-cleanup() {
-    echo "==> Cleaning up network namespaces and bridges..."
-    sudo ip netns del ns1 2>/dev/null || true
-    sudo ip netns del ns2 2>/dev/null || true
-    sudo ip netns del router-ns 2>/dev/null || true
-    sudo ip link del br0 2>/dev/null || true
-    sudo ip link del br1 2>/dev/null || true
-    sudo iptables -D FORWARD -i br0 -j ACCEPT 2>/dev/null || true
-    sudo iptables -D FORWARD -i br1 -j ACCEPT 2>/dev/null || true
-    sudo iptables -D FORWARD -o br0 -j ACCEPT 2>/dev/null || true
-    sudo iptables -D FORWARD -o br1 -j ACCEPT 2>/dev/null || true
-    echo "✓ Cleanup complete"
-}
-
-# uncomment to run cleanup
-# cleanup
+sudo ip netns del ns1 2>/dev/null || true
+sudo ip netns del ns2 2>/dev/null || true
+sudo ip netns del router-ns 2>/dev/null || true
+sudo ip link del br0 2>/dev/null || true
+sudo ip link del br1 2>/dev/null || true
+sudo iptables -D FORWARD -i br0 -j ACCEPT 2>/dev/null || true
+sudo iptables -D FORWARD -i br1 -j ACCEPT 2>/dev/null || true
+sudo iptables -D FORWARD -o br0 -j ACCEPT 2>/dev/null || true
+sudo iptables -D FORWARD -o br1 -j ACCEPT 2>/dev/null || true
 ```
 
 ```makefile
@@ -394,6 +363,8 @@ clean:
 
 ```sh
 #!/bin/bash
+
+# main.sh
 # automation script - network namespace simulation
 
 set -e  # exit on error
