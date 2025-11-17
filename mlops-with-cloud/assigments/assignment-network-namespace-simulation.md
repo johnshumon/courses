@@ -420,7 +420,7 @@ log_warning() {
 # check if running as root
 check_root() {
     if [[ $EUID -ne 0 ]]; then
-        log_error "This script must be run as root (use sudo)"
+        log_error "This script must be run as root (switch to root: sudo su)"
         exit 1
     fi
 }
