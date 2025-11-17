@@ -119,7 +119,7 @@ remember to add a clean up function to clean your network namespaces and bridges
 # setup environment
 #------------------------------------------------------------------------------
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y iproute2 net-tools bridge-utils
+sudo apt install -y iproute2 net-tools
 
 # enable IP forwarding in the Linux kernel
 sudo sysctl -w net.ipv4.ip_forward=1
