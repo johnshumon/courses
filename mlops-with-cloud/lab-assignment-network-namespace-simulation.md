@@ -145,14 +145,14 @@ sudo ip link set br0 up
 sudo ip link set br1 up
 
 #------------------------------------------------------------------------------
-# create veth pairs for ns1 <-> br0 and router <-> br0
+# create veth pairs for ns1 <-> br0 and router-ns <-> br0
 #------------------------------------------------------------------------------
-sudo ip link add veth-ns1-br type veth peer name veth-ns1
-sudo ip link add veth-r0-br type veth peer name veth-r0
+sudo ip link add v-ns1 type veth peer name v-ns1-br0
+sudo ip link add v-rns1 type veth peer name v-rns1-br0
 
-# create veth pairs for ns2 <-> br1 and router <-> br1
-sudo ip link add veth-ns2-br type veth peer name veth-ns2
-sudo ip link add veth-r1-br type veth peer name veth-r1
+# create veth pairs for ns2 <-> br1 and router-ns <-> br1
+sudo ip link add v-ns2 type veth peer name v-ns2-br1
+sudo ip link add v-rns2 type veth peer name v-rns2-br1
 
 #------------------------------------------------------------------------------
 # move one end of each pair into the namespaces
