@@ -91,7 +91,11 @@ remember to add a clean up function to clean your network namespaces and bridges
 
 #### running instructions
 
-- 
+- Copy the manual commands into a terminal and execute them line by line
+- Or save the Makefile and run `make setup`, `make verify`, `make ping`, and `make clean`
+- Or save the bash script as `main.sh`, make it executable with `chmod +x main.sh`, and run `sudo ./main.sh full`
+- All commands require root privileges (use `sudo` or switch to root with `sudo su`)
+- After testing, always run cleanup to remove namespaces and bridges
 
 ##### manual commands
 ```sh
