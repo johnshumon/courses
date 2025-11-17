@@ -9,6 +9,7 @@ create a network simulation with two separate networks connected via a router us
 - **network bridges**
 	- bridge 0 (br0)
 	- bridge 1 (br1)
+
 - **network namespaces**
 	- namespace 1 (ns1) - connected to br0
 	- namespace 2 (ns2) - connected to br1
