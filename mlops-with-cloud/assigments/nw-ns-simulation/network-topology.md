@@ -4,43 +4,34 @@
 
 ```mermaid
 graph TB
-    subgraph "Network 1 (10.0.1.0/24)"
-        NS1[Namespace: ns1<br/>IP: 10.0.1.10/24<br/>Interface: veth-ns1]
-        BR0[Bridge: br0]
-        VETH_NS1_BR[veth-ns1-br]
-        VETH_R_BR0_BR[veth-r-br0-br]
+    subgraph root[" "]
+        direction TB
+        subgraph net1["br0 (192.168.10.0/24)"]
+            v1br["v-ns1-br0"]
+            vr1br["v-rns1-br0"]
+        end
+        
+        subgraph net2["br1 (192.168.20.0/24)"]
+            v2br["v-ns2-br1"]
+            vr2br["v-rns2-br1"]
+        end
     end
     
-    subgraph "Router Namespace (router-ns)"
-        ROUTER[Router<br/>veth-r-br0: 10.0.1.254/24<br/>veth-r-br1: 10.0.2.254/24<br/>IP Forwarding: Enabled]
-        VETH_R_BR0[veth-r-br0]
-        VETH_R_BR1[veth-r-br1]
-    end
+    ns1["ns1<br/>192.168.10.2"]
+    router["router-ns<br/>192.168.10.1<br/>192.168.20.1"]
+    ns2["ns2<br/>192.168.20.2"]
     
-    subgraph "Network 2 (10.0.2.0/24)"
-        NS2[Namespace: ns2<br/>IP: 10.0.2.10/24<br/>Interface: veth-ns2]
-        BR1[Bridge: br1]
-        VETH_NS2_BR[veth-ns2-br]
-        VETH_R_BR1_BR[veth-r-br1-br]
-    end
+    ns1 ---|v-ns1| v1br
+    vr1br ---|v-rns1| router
+    router ---|v-rns2| vr2br
+    v2br ---|v-ns2| ns2
     
-    NS1 ---|veth pair| VETH_NS1_BR
-    VETH_NS1_BR ---|attached| BR0
-    VETH_R_BR0_BR ---|attached| BR0
-    VETH_R_BR0_BR ---|veth pair| VETH_R_BR0
-    VETH_R_BR0 ---|inside| ROUTER
-    
-    VETH_R_BR1 ---|inside| ROUTER
-    VETH_R_BR1 ---|veth pair| VETH_R_BR1_BR
-    VETH_R_BR1_BR ---|attached| BR1
-    VETH_NS2_BR ---|attached| BR1
-    VETH_NS2_BR ---|veth pair| NS2
-    
-    style NS1 fill:#e1f5ff,stroke:#01579b,stroke-width:2px
-    style NS2 fill:#e1f5ff,stroke:#01579b,stroke-width:2px
-    style ROUTER fill:#fff3e0,stroke:#e65100,stroke-width:3px
-    style BR0 fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    style BR1 fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style root fill:#f9f9f9,stroke:#666,stroke-width:2px,stroke-dasharray: 5 5
+    style net1 fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style net2 fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+    style ns1 fill:#bbdefb,stroke:#2196f3,stroke-width:2px
+    style ns2 fill:#bbdefb,stroke:#2196f3,stroke-width:2px
+    style router fill:#ffccbc,stroke:#ff5722,stroke-width:3px
 ```
 
 ## Simplified View
