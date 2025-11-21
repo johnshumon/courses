@@ -1,0 +1,1 @@
+![feature-store-with-aws-feast](./scenarios/feature-store-with-aws-feast.svg)

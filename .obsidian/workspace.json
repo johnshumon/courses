@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mlops-with-cloud/assigments/nw-ns-simulation/network-namespace-simulation.md",
-                "mode": "preview",
+                "file": "mlops-with-cloud/lab-scalable-feature-store.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "network-namespace-simulation"
+              "title": "lab-scalable-feature-store"
             }
           }
         ]
@@ -170,11 +170,15 @@
   },
   "active": "a8183882fbfc84ec",
   "lastOpenFiles": [
+    "Pasted image 20251121171845.png",
+    "mlops-with-cloud/scenarios/feature-store-with-aws-feast.svg",
+    "mlops-with-cloud/readme.md",
+    "mlops-with-cloud/lab-scalable-feature-store.md",
     "mlops-with-cloud/assigments/nw-ns-simulation/network-namespace-simulation.png",
+    "mlops-with-cloud/assigments/nw-ns-simulation/network-namespace-simulation.md",
     "mlops-with-cloud/assigments/nw-ns-simulation/networking-namespaces-simulation.png",
     "mlops-with-cloud/lab-networking-namespaces.md",
     "mlops-with-cloud/assigments/nw-ns-simulation/network-topology.md",
-    "mlops-with-cloud/assigments/nw-ns-simulation/network-namespace-simulation.md",
     "mlops-with-cloud/assigments/nw-ns-simulation/Makefile",
     "mlops-with-cloud/assigments/nw-ns-simulation",
     "mlops-with-cloud/assigments/Makefile",
