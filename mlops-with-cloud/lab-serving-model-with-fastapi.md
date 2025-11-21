@@ -2,11 +2,11 @@
 MLflow Model Serving enables deployment of machine learning models for real-time or batch inference via REST APIs. It supports multiple ML frameworks (e.g., TensorFlow, PyTorch, Scikit-learn) and deployment targets (local, cloud, Kubernetes).
 
 - table of contents
-- project structure
-- training and model registry
-- model serving with fastAPI
-- monitoring
-- conclusion
+  - project structure
+  - training and model registry
+  - model serving with fastAPI
+  - monitoring
+  - conclusion
 
 ```
 wine_quality_mlflow_lab/
