@@ -1,5 +1,3 @@
-![feature-store-with-aws-feast](./scenarios/feature-store-with-aws-feast.svg)
-
 - objective
   - create AWS infrastructure using Pulumi (VPC, EC2, subnets, networking, security groups, S3).
   - install and configure Feast (both script-based and manual methods).
@@ -15,8 +13,14 @@
     - Tracking feature lineage and versioning
 
 - architecture Overview
-
   - bastion host in a public subnet
   - ec2 instance in private subnet
   - public and private Route Tables
   - NAT gateway to expose the private instance
+
+![feature-store-with-aws-feast](./scenarios/feature-store-with-aws-feast.svg)
+
+- prerequisites
+	- pulumi account and AWS cli
+	- conda, feast SDK, Feast cli
+	- redis
