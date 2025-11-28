@@ -27,66 +27,65 @@ mkdir model_evaluation_lab && cd model_evaluation_lab && python3 -m venv mlops &
 pip install mlflow scikit-learn xgboost shap
 EOF
 
-$ curl -L -o ./red-wine-quality-cortez-et-al-2009.zip\
-  https://www.kaggle.com/api/v1/datasets/download/uciml/red-wine-quality-cortez-et-al-2009
-$ unzip red-wine-quality-cortez-et-al-2009.zip
-
 $ mlflow server --host 0.0.0.0 --port 5000 --allowed-hosts '*' --cors-allowed-origins '*'
-$ uvicorn serve:app --host 0.0.0.0 --port 8000
 ```
 
 
 - model training and registry
 ```python
-# wine_quality_mlflow_lab/train.py
+# classification.py
+# This script demonstrates model evaluation using MLflow for a classification task
 
 import mlflow
-import mlflow.sklearn
-from mlflow.models import infer_signature
-from sklearn.ensemble import RandomForestRegressor
+import xgboost as xgb
+import shap
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
-import pandas as pd
-import numpy as np
+from mlflow.models import infer_signature
 
-# Set MLflow tracking URI
+#Set mlflow tracking uri
 mlflow.set_tracking_uri("http://localhost:5000")
 
-# Load Wine Quality dataset
-data = pd.read_csv("dataset/winequality-red.csv")
-X = data.drop("quality", axis=1)
-y = data["quality"]
+experiment_name= "evaluation"
+try:
+    _ = mlflow.create_experiment(name=experiment_name)
+except mlflow.exceptions.MlflowException:
+    experiment= mlflow.get_experiment_by_name(name= experiment_name)
 
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#Set experiment
+experiment= mlflow.set_experiment(experiment_name)
 
-# Define model parameters
-params = {"n_estimators": 100, "max_depth": 5, "random_state": 42}
+# Load the UCI Adult Dataset
+X, y = shap.datasets.adult()
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.33, random_state=42
+)
 
 # Train model
-model = RandomForestRegressor(**params)
-model.fit(X_train, y_train)
+model = xgb.XGBClassifier().fit(X_train, y_train)
 
-# Predict and calculate RMSE
-y_pred = model.predict(X_test)
-rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+# Create evaluation dataset
+eval_data = X_test.copy()
+eval_data["label"] = y_test
 
-# Start MLflow run
-with mlflow.start_run() as run:
-    # Log parameters and metrics
-    mlflow.log_params(params)
-    mlflow.log_metric("rmse", rmse)
+with mlflow.start_run():
+    # Log model with signature
+    signature = infer_signature(X_test, model.predict(X_test))
+    mlflow.sklearn.log_model(model, artifact_path="model", signature=signature)
+    model_uri = mlflow.get_artifact_uri("model")
 
-    # Infer model signature
-    signature = infer_signature(X_test, y_pred)
-
-    # Log and register the model
-    mlflow.sklearn.log_model(
-        sk_model=model,
-        artifact_path="wine-quality-model-one",
-        signature=signature,
-        registered_model_name="WineQuality-RandomForest-Model"
+    # Comprehensive evaluation
+    result = mlflow.models.evaluate(
+        model_uri,
+        eval_data,
+        targets="label",
+        model_type="classifier",
+        evaluators=["default"],
     )
+
+    print(f"Accuracy: {result.metrics['accuracy_score']:.3f}")
+    print(f"F1 Score: {result.metrics['f1_score']:.3f}")
+    print(f"ROC AUC: {result.metrics['roc_auc']:.3f}")
+
 ```
 
 ```python
