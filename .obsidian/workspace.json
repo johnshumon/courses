@@ -170,6 +170,8 @@
   },
   "active": "a8183882fbfc84ec",
   "lastOpenFiles": [
+    "mlops-with-cloud/lab-model-evaluation.md",
+    "mlops-with-cloud/lab-serving-model-with-fastapi copy.md",
     "mlops-with-cloud/readme.md",
     "mlops-with-cloud/lab-scalable-feature-store.md",
     "mlops-with-cloud/lab-feature-store-with-aws-feast.md",
