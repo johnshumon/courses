@@ -1,12 +1,20 @@
-# MLOps with Cloud Labs
+---
+tags:
+  - mlops
+  - labs
+title: list-of-mlops-labs
+url: https://poridhi.io/lab-group-modules/68eb5ecf9f04a10ff512cbc4
+---
+
+## MLOps with Cloud Labs
 
 - Experiment Tracking & Versioning with MLFlowx
-  - MLflow Fundamentals
-  - Experiment Tracking
-  - Model Registry
-  - MLflow Autologging
-  - Serving an ML Model from MLflow Model Registry with FastAPI
-  - MLflow Model Evaluation
+  - MLflow Fundamentals - ☑
+  - Experiment Tracking - ☑
+  - Model Registry - ☑
+  - MLflow Autologging - ☑
+  - Serving an ML Model from MLflow Model Registry with FastAPI - ☑
+  - MLflow Model Evaluation - ☑
   - Autologging Objective
 
 - ML refresher
@@ -23,16 +31,16 @@
   - Classification Challenge
   - Clustering Challenge
 
-- Container Networking
-  - Network Namespace Inspecting
-  - Connect Network NS to Host
-  - Connect Network NS to Root
-  - Egress Traffic
-  - Connect Two Custom Network NS
-  - Bridge Networking Among Namespaces
-  - Process Communication Between Namespaces
-  - FIB Network Topology
-  - Network Namespace Simulation Assignment
+- Container Networking - ☑
+  - Network Namespace Inspecting - ☑
+  - Connect Network NS to Host - ☑
+  - Connect Network NS to Root - ☑
+  - Egress Traffic - ☑
+  - Connect Two Custom Network NS - ☑
+  - Bridge Networking Among Namespaces - ☑
+  - Process Communication Between Namespaces - ☑
+  - FIB Network Topology - ☑
+  - Network Namespace Simulation Assignment - ☑
 
 - AWS Networking for MLOps
   - Launch An EC2 Instance In A Virtual Private Cloud (VPC)
@@ -61,14 +69,14 @@
 - Feature Stores
   - Deploying a Scalable Feature Store with Feast on AWS
 
-- API Development with FastAPI
-  - FastAPI Fundamentals: Building and Validating APIs
-  - Database Integration with FastAPI
-  - ML API Fundamentals with FastAPI
-  - FastAPI Advance Concepts
-  - Serving a Machine Learning System using FastAPI
-  - Deploying a Machine Learning Model with FastAPI and Docker
-  - Deploying FastAPI ML Model on an EC2 Instance with Docker
+- API Development with FastAPI - ❌
+  - FastAPI Fundamentals: Building and Validating APIs - ✖
+  - Database Integration with FastAPI - ✖
+  - ML API Fundamentals with FastAPI - ✖
+  - FastAPI Advance Concepts - ✖
+  - Serving a Machine Learning System using FastAPI - ✖
+  - Deploying a Machine Learning Model with FastAPI and Docker - ✖
+  - Deploying FastAPI ML Model on an EC2 Instance with Docker - ✖
 
 - Monitoring & Observability
   - Basic Observability for FastAPI Applications with Prometheus and...
@@ -80,18 +88,18 @@
   - Deploying an MLflow Model Registry on AWS with Pulumi to Store Trained...
   - Deployment of a Model Training Pipeline and Tracking System with...
 
-- Basic Docker Concepts
-  - Running an NGINX Web Server in a Docker Container
-  - The Lifecycle of a Container
-  - Differentiating Docker stop vs Kill
-  - Docker Container Restart Policies
-  - Automatic Restart of Docker Containers
+- Basic Docker Concepts - ✖
+  - Running an NGINX Web Server in a Docker Container - ✖
+  - The Lifecycle of a Container - ✖
+  - Differentiating Docker stop vs Kill - ✖
+  - Docker Container Restart Policies - ✖
+  - Automatic Restart of Docker Containers - ✖
 
-- Docker CLI and Image Management
-  - Filtering Docker Images
-  - Docker Search Command
-  - Create own Docker image
-  - Docker image layer sharing and digest
+- Docker CLI and Image Management - ✖
+  - Filtering Docker Images - ✖
+  - Docker Search Command - ✖
+  - Create own Docker image - ✖
+  - Docker image layer sharing and digest - ✖
 
 - Docker Container Networking
   - Communication Between Containers in a Custom Bridge Network

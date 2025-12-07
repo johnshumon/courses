@@ -6,172 +6,172 @@ url: https://tahnik.notion.site/MLOps-with-Cloud-Season-2-Episodes-Modules-24d3e
 ---
 ## episodes by modules
 
-### episode 01 — MLOps & Cloud Foundations
-- Module 1 — Experiment Tracking & Model Metadata Management (MLflow)
-- Module 2 — Data & Pipeline Versioning (DVC, git-lfs)
-- Module 3 — Feature Stores & Databases (Feast, Redis, Postgres)
-- Module 4 — API Development with FastAPI for Model Serving
-- Module 5 — CI/CD for ML Services
-- Module 6 — Monitoring & Observability for ML Systems
+### episode 01 — MLOps & cloud foundations
+- module 1 — experiment tracking & model metadata management (MLflow)
+- module 2 — data & pipeline versioning (DVC, git-lfs)
+- module 3 — feature stores & databases (Feast, Redis, Postgres)
+- module 4 — API development with FastAPI for model serving
+- module 5 — CI/CD for ML services
+- module 6 — monitoring & observability for ML systems
 
-### episode 02 — AWS Cloud Infrastructure for ML
-- Module 1 — AWS Fundamentals for MLOps
-- Module 2 — Compute & Storage for ML
-- Module 3 — Networking for ML Systems
-- Module 4 — Load Balancing, Scaling & Reliability
-- Module 5 — Infrastructure as Code for AWS
+### episode 02 — AWS cloud infrastructure for ML
+- module 1 — AWS fundamentals for MLOps
+- module 2 — compute & storage for ML
+- module 3 — networking for ML systems
+- module 4 — load balancing, scaling & reliability
+- module 5 — infrastructure as code for AWS
 
-### episode 03 — Docker & Containerization for MLOps
-- Module 1 — Docker Fundamentals for ML Workloads
-- Module 2 — Writing Dockerfiles for ML Applications
-- Module 3 — Containerizing ML APIs and Batch Jobs
-- Module 4 — Managing Docker Images & Registries
-- Module 5 — Multi-Container Architectures for ML Systems
-- Module 6 — Debugging & Optimizing Containers
+### episode 03 — Docker & containerization for MLOps
+- module 1 — docker fundamentals for ML workloads
+- module 2 — writing Dockerfiles for ML applications
+- module 3 — containerizing ML APIs and batch jobs
+- module 4 — managing Docker images & registries
+- module 5 — multi-container architectures for ML systems
+- module 6 — debugging & optimizing containers
 
-### episode 4 — Data Engineering for MLOps (Kafka, Spark, Batch & Streaming Pipelines, Data Quality)
-- Module 1 — Data Engineering Concepts for MLOps
-- Module 2 — Event Streaming with Kafka
-- Module 3 — Batch Processing with Apache Spark
-- Module 4 — Streaming Feature Pipelines
-- Module 5 — Data Quality for ML
-- Module 6 — Workflow Orchestration with Airflow
-- Module 7 — Integration with Feature Stores
+### episode 4 — data engineering for MLOps (Kafka, Spark, batch & streaming pipelines, data quality)
+- module 1 — data engineering concepts for MLOps
+- module 2 — event streaming with Kafka
+- module 3 — batch processing with Apache Spark
+- module 4 — streaming feature pipelines
+- module 5 — data quality for ML
+- module 6 — workflow orchestration with Airflow
+- module 7 — integration with feature stores
 
-### episode 5 — Fraud Detection Pipeline on AWS (End-to-End Real-Time ML Pipeline)
-- Module 1: Project Scaffolding, Environment Setup & Cost Guardrails
-- Module 2: Streaming Infrastructure with Kafka on AWS EC2
-- Module 3: Raw Event Storage (S3 + MongoDB)
-- Module 4: Experiment Tracking & Model Registry with MLflow
-- Module 5: Baseline Model Training & Logging
-- Module 6: Feature Store with Feast
-- Module 7: Real-Time Feature Aggregation
-- Module 8: Model Serving — Streaming Scoring Service
-- Module 9: Ad-hoc Prediction API with FastAPI
-- Module 10: Containerization & Deployment to AWS
-- Module 11: CI/CD for Fraud Detection Services
-- Module 12: Monitoring & Observability
-- Module 13: Load Testing & Latency Optimization
-- Module 14: Continual Learning & Drift Detection
-- Module 15: Governance, Explainability & Cost Intelligence
+### episode 5 — fraud detection pipeline on AWS (end-to-end real-time ML pipeline)
+- module 1: project scaffolding, environment setup & cost guardrails
+- module 2: streaming infrastructure with Kafka on AWS EC2
+- module 3: raw event storage (S3 + MongoDB)
+- module 4: experiment tracking & model registry with MLflow
+- module 5: baseline model training & logging
+- module 6: feature store with Feast
+- module 7: real-time feature aggregation
+- module 8: model serving — streaming scoring service
+- module 9: ad-hoc prediction API with FastAPI
+- module 10: containerization & deployment to AWS
+- module 11: CI/CD for fraud detection services
+- module 12: monitoring & observability
+- module 13: load testing & latency optimization
+- module 14: continual learning & drift detection
+- module 15: governance, explainability & cost intelligence
 
-### episode 06 — Kubernetes for MLOps (Poridhi k8s Cluster, EKS)
-- Module 6.1 — Kubernetes Fundamentals for MLOps
-- Module 6.2 — Setting Up Kubernetes Environments (K3s & AWS EKS)
-- Module 6.3 — Kubernetes Resource Management for ML
-- Module 6.4 — Storage & Data in Kubernetes
-- Module 6.5 — Networking & Service Exposure
-- Module 6.6 — Configurations, Secrets, and Environment Management
-- Module 6.7 — Observability for ML Workloads in Kubernetes
-- Module 6.8 — CI/CD for Kubernetes MLOps
+### episode 06 — Kubernetes for MLOps (Poridhi k8s cluster, EKS)
+- module 6.1 — kubernetes fundamentals for MLOps
+- module 6.2 — setting up Kubernetes environments (K3s & AWS EKS)
+- module 6.3 — kubernetes resource management for ML
+- module 6.4 — storage & data in Kubernetes
+- module 6.5 — networking & service exposure
+- module 6.6 — configurations, secrets, and environment management
+- module 6.7 — observability for ML workloads in Kubernetes
+- module 6.8 — CI/CD for Kubernetes MLOps
 
-### episode 07 — Kubeflow Pipelines for End-to-End Orchestration on Kubernetes
-- Module 8.1 — Introduction to Kubeflow for MLOps
-- Module 8.2 — Setting Up Kubeflow on Kubernetes
-- Module 8.3 — Creating Your First ML Pipeline
-- Module 8.4 — Advanced Pipeline Patterns
-- Module 8.5 — Hyperparameter Tuning with Katib
-- Module 8.6 — Continuous Training & Deployment Pipelines
-- Module 8.7 — Serving Models with KFServing
-- Module 8.8 — Monitoring & Observability in Kubeflow
+### episode 07 — Kubeflow pipelines for end-to-end orchestration on Kubernetes
+- module 8.1 — introduction to Kubeflow for MLOps
+- module 8.2 — setting up Kubeflow on Kubernetes
+- module 8.3 — creating your first ML pipeline
+- module 8.4 — advanced pipeline patterns
+- module 8.5 — hyperparameter tuning with Katib
+- module 8.6 — continuous training & deployment pipelines
+- module 8.7 — serving models with KFServing
+- module 8.8 — monitoring & observability in Kubeflow
 
-### episode 8 — Distributed Computing for ML with Ray
-- Module 7.1 — Introduction to Ray for MLOps
-- Module 7.2 — Running Ray on Cloud & on Kubernetes
-- Module 7.3 — Distributed Data Processing with Ray Data
-- Module 7.4 — Distributed Training with Ray Train
-- Module 7.5 — Hyperparameter Tuning with Ray Tune
-- Module 7.6 — Serving Models with Ray Serve
-- Module 7.7 — Ray for Reinforcement Learning
-- Module 7.8 — Monitoring & Debugging Ray Workloads
-- Module 7.9 — CI/CD for Ray Pipelines
+### episode 8 — distributed computing for ML with Ray
+- module 7.1 — introduction to Ray for MLOps
+- module 7.2 — running Ray on cloud & on Kubernetes
+- module 7.3 — distributed data processing with Ray Data
+- module 7.4 — distributed training with Ray Train
+- module 7.5 — hyperparameter tuning with Ray Tune
+- module 7.6 — serving models with Ray Serve
+- module 7.7 — Ray for reinforcement learning
+- module 7.8 — monitoring & debugging Ray workloads
+- module 7.9 — CI/CD for Ray pipelines
 
-### episode 09 — Building a Scalable Recommender System Pipeline
-- Module 9.1 — Problem Definition & System Architecture
-- Module 9.2 — Data Ingestion & Processing
-- Module 9.3 — Feature Engineering with Feast
-- Module 9.4 — Distributed Training with Ray on Kubernetes
-- Module 9.5 — Orchestrating the Pipeline with Kubeflow
-- Module 9.6 — Model Evaluation & A/B Testing
-- Module 9.7 — Real-Time Serving with KFServing
-- Module 9.8 — Monitoring & Observability
-- Module 9.9 — Continuous Training & Improvement
+### episode 09 — building a scalable recommender system pipeline
+- module 9.1 — problem definition & system architecture
+- module 9.2 — data ingestion & processing
+- module 9.3 — feature engineering with Feast
+- module 9.4 — distributed training with Ray on Kubernetes
+- module 9.5 — orchestrating the pipeline with Kubeflow
+- module 9.6 — model evaluation & A/B testing
+- module 9.7 — real-time serving with KFServing
+- module 9.8 — monitoring & observability
+- module 9.9 — continuous training & improvement
 
-### episode 10 — Deep Learning Pipelines & Model Serving
-- Module 1 — Deep Learning Fundamentals in the MLOps Context
-- Module 2 — Data Preprocessing Pipelines for DL
-- Module 3 — Training Deep Learning Models at Scale
-- Module 4 — Model Packaging & Versioning
-- Module 5 — Serving Deep Learning Models
-- Module 6 — GPU Inference Optimization
-- Module 7 — CI/CD for Deep Learning Pipelines
-- Module 8 — Monitoring DL Models in Production
+### episode 10 — deep learning pipelines & model serving
+- module 1 — deep learning fundamentals in the MLOps context
+- module 2 — data preprocessing pipelines for DL
+- module 3 — training deep learning models at scale
+- module 4 — model packaging & versioning
+- module 5 — serving deep learning models
+- module 6 — GPU inference optimization
+- module 7 — CI/CD for deep learning pipelines
+- module 8 — monitoring DL models in production
 
-### episode 11 — Anomaly Detection in Production
-- Module 1 — Project Scaffolding, Environment Setup & Cost Guardrails
-- Module 2 — Streaming Infrastructure with Kafka on AWS EC2
-- Module 3 — Raw Event Storage & Historical Store
-- Module 4 — Experiment Tracking & Model Registry with MLflow
-- Module 5 — Baseline Model Training & Evaluation
-- Module 6 — Feature Store with Feast
-- Module 7 — Real-Time Feature Aggregation
-- Module 8 — Model Serving — Streaming Anomaly Detection Service
-- Module 9 — Alerting API with FastAPI
-- Module 10 — Containerization & Deployment
-- Module 11 — CI/CD for Anomaly Detection
-- Module 12 — Monitoring & Observability
-- Module 13 — Load Testing & Latency Optimization
-- Module 14 — Continual Learning & Drift Detection
+### episode 11 — anomaly detection in production
+- module 1 — project scaffolding, environment setup & cost guardrails
+- module 2 — streaming infrastructure with Kafka on AWS EC2
+- module 3 — raw event storage & historical store
+- module 4 — experiment tracking & model registry with MLflow
+- module 5 — baseline model training & evaluation
+- module 6 — feature store with Feast
+- module 7 — real-time feature aggregation
+- module 8 — model serving — streaming anomaly detection service
+- module 9 — alerting API with FastAPI
+- module 10 — containerization & deployment
+- module 11 — CI/CD for anomaly detection
+- module 12 — monitoring & observability
+- module 13 — load testing & latency optimization
+- module 14 — continual learning & drift detection
 
-### episode 12 — Computer Vision Pipeline with Distributed Training & Deployment)
-- Module 10.1 — Problem Definition & Use Cases
-- Module 10.2 — Data Acquisition & Storage
-- Module 10.3 — Data Preprocessing & Augmentation
-- Module 10.4 — Distributed Training with Ray
-- Module 10.5 — Model Evaluation
-- Module 10.6 — Model Optimization with TensorRT
-- Module 10.7 — Deployment with KFServing
-- Module 10.8 — Real-Time Inference
-- Module 10.9 — Monitoring & Drift Detection
-- Module 10.10 — Continuous Training & Automation
+### episode 12 — computer vision pipeline with distributed training & deployment)
+- module 10.1 — problem definition & use cases
+- module 10.2 — data acquisition & storage
+- module 10.3 — data preprocessing & augmentation
+- module 10.4 — distributed training with Ray
+- module 10.5 — model evaluation
+- module 10.6 — model optimization with TensorRT
+- module 10.7 — deployment with KFServing
+- module 10.8 — real-time inference
+- module 10.9 — monitoring & drift detection
+- module 10.10 — continuous training & automation
 
-### episode 13 — NLP & LLM Engineering at Scale
-- Module 1 — Project Scaffolding, Environment Setup & Cost Guardrails
-- Module 2 — NLP Data Engineering & Preprocessing
-- Module 3 — Experiment Tracking & Model Registry with MLflow
-- Module 4 — Applied NLP Model Development
-- Module 5 — LLM from Scratch — Architecture & Training
-- Module 6 — Feature Store for NLP Pipelines
-- Module 7 — Deployment Infrastructure for NLP Models
-- Module 8 — Retrieval-Augmented Generation (RAG) Pipeline
-- Module 9 — API Development & Model Serving
-- Module 10 — CI/CD for NLP & LLM
-- Module 11 — Monitoring & Observability
-- Module 12 — Continual Learning & Fine-Tuning in Production
+### episode 13 — NLP & LLM engineering at scale
+- module 1 — project scaffolding, environment setup & cost guardrails
+- module 2 — NLP data engineering & preprocessing
+- module 3 — experiment tracking & model registry with MLflow
+- module 4 — applied NLP model development
+- module 5 — LLM from scratch — architecture & training
+- module 6 — feature store for NLP pipelines
+- module 7 — deployment infrastructure for NLP models
+- module 8 — retrieval-augmented generation (RAG) pipeline
+- module 9 — API development & model serving
+- module 10 — CI/CD for NLP & LLM
+- module 11 — monitoring & observability
+- module 12 — continual learning & fine-tuning in production
 
-### episode 14 — Time Series Prediction Pipeline in Edge Deployment
-- Module 1 — Project Scaffolding, Environment Setup & Cost Guardrails
-- Module 2 — Time Series Data Engineering & Preprocessing
-- Module 3 — Experiment Tracking & Model Registry with MLflow
-- Module 4 — Baseline & Advanced Forecasting Models
-- Module 5 — Feature Store for Time Series
-- Module 6 — Batch Forecasting Pipeline
-- Module 7 — Real-Time Forecasting Pipeline
-- Module 8 — Deployment Infrastructure
-- Module 9 — API Development & Edge/Mobile Deployment
-- Module 10 — CI/CD for Time Series Models
-- Module 11 — Monitoring & Observability
-- Module 12 — Drift Detection & Continual Learning
+### episode 14 — time series prediction pipeline in edge deployment
+- module 1 — project scaffolding, environment setup & cost guardrails
+- module 2 — time series data engineering & preprocessing
+- module 3 — experiment tracking & model registry with MLflow
+- module 4 — baseline & advanced forecasting models
+- module 5 — feature store for time series
+- module 6 — batch forecasting pipeline
+- module 7 — real-time forecasting pipeline
+- module 8 — deployment infrastructure
+- module 9 — API development & edge/mobile deployment
+- module 10 — CI/CD for time series models
+- module 11 — monitoring & observability
+- module 12 — drift detection & continual learning
 
-### episode 15 — Advanced Operational MLOps Practices
-- Module 1 — Advanced Monitoring & Observability
-- Module 2 — Drift Detection & Automated Responses
-- Module 3 — Continual Learning & Incremental Retraining
-- Module 4 — Security & Compliance for ML Systems
-- Module 5 — Cost Management & Efficiency
-- Module 6 — Self-Healing Pipelines
-- Module 7 — Auditability, Explainability & Trust
-- Module 8 — Cross-Project Integration Patterns
+### episode 15 — advanced operational MLOps practices
+- module 1 — advanced monitoring & observability
+- module 2 — drift detection & automated responses
+- module 3 — continual learning & incremental retraining
+- module 4 — security & compliance for ML systems
+- module 5 — cost management & efficiency
+- module 6 — self-healing pipelines
+- module 7 — auditability, explainability & trust
+- module 8 — cross-project integration patterns
 
 ### resource link
 - [mlflow-docs](https://mlflow.org/docs/latest/ml)

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mlops-with-cloud/readme.md",
+                "file": "mlops-with-cloud/list-of-mlops-labs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "list-of-mlops-labs"
             }
           }
         ]
@@ -170,9 +170,10 @@
   },
   "active": "c0360efe476d713e",
   "lastOpenFiles": [
-    "mlops-with-cloud/lab-feature-store-with-aws-feast.md",
     "mlops-with-cloud/readme.md",
     "mlops-with-cloud/list-of-labs.md",
+    "mlops-with-cloud/list-of-mlops-labs.md",
+    "mlops-with-cloud/lab-feature-store-with-aws-feast.md",
     "LICENSE copy",
     "mlops-with-cloud/lab-model-evaluation.md",
     "mlops-with-cloud/lab-serving-model-with-fastapi copy.md",
