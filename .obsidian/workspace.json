@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mlops-with-cloud/lab-feature-store-with-aws-feast.md",
+                "file": "mlops-with-cloud/readme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lab-feature-store-with-aws-feast"
+              "title": "readme"
             }
           }
         ]
@@ -170,12 +170,12 @@
   },
   "active": "a8183882fbfc84ec",
   "lastOpenFiles": [
+    "mlops-with-cloud/lab-feature-store-with-aws-feast.md",
     "LICENSE copy",
     "mlops-with-cloud/lab-model-evaluation.md",
     "mlops-with-cloud/lab-serving-model-with-fastapi copy.md",
     "mlops-with-cloud/readme.md",
     "mlops-with-cloud/lab-scalable-feature-store.md",
-    "mlops-with-cloud/lab-feature-store-with-aws-feast.md",
     "Pasted image 20251121171845.png",
     "mlops-with-cloud/scenarios/feature-store-with-aws-feast.svg",
     "mlops-with-cloud/assigments/nw-ns-simulation/network-namespace-simulation.png",
