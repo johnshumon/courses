@@ -168,13 +168,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a8183882fbfc84ec",
+  "active": "c0360efe476d713e",
   "lastOpenFiles": [
     "mlops-with-cloud/lab-feature-store-with-aws-feast.md",
+    "mlops-with-cloud/readme.md",
+    "mlops-with-cloud/list-of-labs.md",
     "LICENSE copy",
     "mlops-with-cloud/lab-model-evaluation.md",
     "mlops-with-cloud/lab-serving-model-with-fastapi copy.md",
-    "mlops-with-cloud/readme.md",
     "mlops-with-cloud/lab-scalable-feature-store.md",
     "Pasted image 20251121171845.png",
     "mlops-with-cloud/scenarios/feature-store-with-aws-feast.svg",
