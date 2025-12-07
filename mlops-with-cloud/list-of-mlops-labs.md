@@ -69,7 +69,7 @@ url: https://poridhi.io/lab-group-modules/68eb5ecf9f04a10ff512cbc4
 - Feature Stores
   - Deploying a Scalable Feature Store with Feast on AWS
 
-- API Development with FastAPI - ❌
+- API Development with FastAPI - ✖
   - FastAPI Fundamentals: Building and Validating APIs - ✖
   - Database Integration with FastAPI - ✖
   - ML API Fundamentals with FastAPI - ✖
