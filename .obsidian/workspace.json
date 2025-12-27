@@ -11,12 +11,14 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.10.6"
+                "file": "mlops-with-cloud/list-of-mlops-labs.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.6"
+              "icon": "lucide-file",
+              "title": "list-of-mlops-labs"
             }
           }
         ]
@@ -168,8 +170,8 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "mlops-with-cloud/list-of-mlops-labs.md",
     "mlops-with-cloud/readme.md",
+    "mlops-with-cloud/list-of-mlops-labs.md",
     "mlops-with-cloud/list-of-labs.md",
     "mlops-with-cloud/lab-feature-store-with-aws-feast.md",
     "LICENSE copy",
