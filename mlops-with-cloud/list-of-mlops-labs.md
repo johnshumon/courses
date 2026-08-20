@@ -8,7 +8,7 @@ url: https://poridhi.io/lab-group-modules/68eb5ecf9f04a10ff512cbc4
 
 ## MLOps with Cloud Labs
 
-- Experiment Tracking & Versioning with MLFlowx
+- Experiment Tracking & Versioning with MLFlow
   - MLflow Fundamentals - ☑
   - Experiment Tracking - ☑
   - Model Registry - ☑
