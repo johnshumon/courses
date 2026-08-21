@@ -8,112 +8,118 @@ course-nav: https://tahnik.notion.site/Course-Content-Navigating-Doc-LIVE-MLOps-
 ## episodes by modules
 
 ### episode 01 — MLOps & cloud foundations
-- module 1 — experiment tracking & model metadata management (MLflow)
+- **module 1** — experiment tracking & model metadata management (MLflow)
   - MLflow components: tracking, registry, models, projects
   - Deploy MLflow on AWS EC2 with RDS (Postgres) and S3 artifact storage
   - Authentication and TLS setup with Nginx reverse proxy
   - Logging metrics, parameters, and artifacts
   - Integrating MLflow with scikit-learn, PyTorch, TensorFlow
-- module 2 — data & pipeline versioning (DVC, git-lfs)
+- **module 2** — data & pipeline versioning (DVC, git-lfs)
   - Versioning datasets alongside code
   - Using DVC with S3 remote storage
   - Git LFS for large file handling
   - Data lineage and reproducibility with DVC
   - Integrating DVC with MLFlow
-- module 3 — feature stores & databases (Feast, Redis, Postgres)
+- **module 3** — feature stores & databases (Feast, Redis, Postgres)
   - Feature store fundamentals: entities, feature views, materialization
   - Deploy Feast with S3 offline store and Redis online store on AWS
   - Freshness metrics and monitoring feature health
   - Online/offline feature consistency
-- module 4 — API development with FastAPI for model serving
+- **module 4** — API development with FastAPI for model serving
   - Designing inference APIs for ML models
   - Loading and serving MLflow-registered models in FastAPI
   - Securing endpoints with API keys and rate limiting
   - Instrumentation with Prometheus metrics endpoints
-- module 5 — CI/CD for ML services
+- **module 5** — CI/CD for ML services
   - GitHub Actions workflows for ML model CI
   - Docker build & push to AWS ECR
   - Canary and blue/green deployment strategies overview
   - Connecting CI/CD with MLflow model promotion
-- module 6 — monitoring & observability for ML systems
+- **module 6** — monitoring & observability for ML systems
   - Metrics: infra, application, model
   - Deploy Prometheus & Grafana on AWS EC2
   - Dashboarding model accuracy, latency, drift indicators
   - Alerting with Alertmanager + SNS
 
+---
+
+---
+
 ### episode 02 — AWS cloud infrastructure for ML
-- module 1 — AWS fundamentals for MLOps
+- **module 1** — AWS fundamentals for MLOps
   - AWS global infrastructure overview
   - Regions, AZs, VPC basics
   - IAM essentials (users, roles, policies, least privilege)
   - Cost guardrails: Budgets, billing alerts, tagging strategies
-- module 2 — compute & storage for ML
+- **module 2** — compute & storage for ML
   - EC2 instance types for ML workloads
   - Configuring S3 buckets for ML data and artifacts
   - S3 lifecycle policies & storage classes
   - Using RDS (Postgres/MySQL) for ML metadata
-- module 3 — networking for ML systems
+- **module 3** — networking for ML systems
   - VPC design for ML workloads
   - Subnets (public vs private), route tables, NAT gateways
   - Security groups and NACLs
   - PrivateLink and VPC endpoints for secure AWS service access
-- module 4 — load balancing, scaling & reliability
+- **module 4** — load balancing, scaling & reliability
   - Elastic Load Balancing (ALB/NLB) for ML APIs
   - Auto Scaling Groups for serving workloads
   - Scaling policies for latency, CPU, or custom metrics
   - High availability patterns in AWS
-- module 5 — infrastructure as code for AWS
+- **module 5** — infrastructure as code for AWS
   - Terraform & Pulumi basics for AWS infra
   - Modular infrastructure patterns
   - Using variables, workspaces, and state management
   - CI/CD for IaC
 
+---
 ### episode 03 — Docker & containerization for MLOps
-- module 1 — docker fundamentals for ML workloads
+- **module 1** — docker fundamentals for ML workloads
   - What is containerization and why it matters in MLOps
   - Comparing VMs and containers (pros, cons, resource usage)
   - Installing and configuring Docker for development
   - Understanding images, containers, layers, and registries
   - The role of containerization in reproducible ML experiments
-- module 2 — writing Dockerfiles for ML applications
+- **module 2** — writing Dockerfiles for ML applications
   - Best practices for structuring Dockerfiles for Python/ML projects
   - Multi-stage builds to reduce image size
   - Managing Python dependencies with pip, poetry, or conda in containers
   - Using .dockerignore to reduce build context size
   - Incorporating system-level dependencies (OpenCV, CUDA libraries, etc.)
-- module 3 — containerizing ML APIs and batch jobs
+- **module 3** — containerizing ML APIs and batch jobs
   - Packaging a FastAPI model-serving service into a container
   - Building containers for data preprocessing and ETL jobs
   - Entrypoints and CMD for batch processing containers
   - Passing environment variables and secrets securely
   - Performance considerations (CPU pinning, memory limits, caching layers)
-- module 4 — managing Docker images & registries
+- **module 4** — managing Docker images & registries
   - Using Docker Hub, AWS ECR
   - Versioning ML service images for rollback and reproducibility
   - Image scanning for vulnerabilities (Trivy, Grype)
   - Automating builds and pushes via CI/CD pipelines
   - Cleaning up unused images and layers to reduce costs
-- module 5 — multi-container architectures for ML systems
+- **module 5** — multi-container architectures for ML systems
   - Using Docker Compose for local multi-service ML stacks (API + DB + monitoring)
   - Defining service dependencies (e.g., FastAPI + Redis + MLflow + Kafka)
   - Networking containers together
   - Sharing volumes for feature stores and artifact storage
   - Local dev workflow for end-to-end pipelines
-- module 6 — debugging & optimizing containers
+- **module 6** — debugging & optimizing containers
   - Inspecting running containers (logs, exec, stats)
   - Measuring container resource usage (CPU, memory, GPU, network)
   - Reducing cold-start latency for ML APIs
   - Caching dependencies for faster builds
   - Handling container crashes and restart policies
 
+---
 ### episode 04 — data engineering for MLOps (Kafka, Spark, batch & streaming pipelines, data quality)
-- module 1 — data engineering concepts for MLOps
+- **module 1** — data engineering concepts for MLOps
   - The role of data engineering in production ML systems
   - Batch vs streaming pipelines in ML use cases
   - Latency, throughput, and freshness trade-offs
   - Data schema evolution and governance for ML
   - Common pitfalls (e.g., train-serve skew, stale features, poor data quality)
-- module 2 — event streaming with Kafka
+- **module 2** — event streaming with Kafka
   - Kafka architecture for ML: brokers, topics, partitions, replication
   - Kafka KRaft vs ZooKeeper mode
   - Designing topics for ML use cases (keying, partitioning, retention)
@@ -122,639 +128,651 @@ course-nav: https://tahnik.notion.site/Course-Content-Navigating-Doc-LIVE-MLOps-
   - Kafka Connect for ingestion (S3 sink, JDBC sink)
   - Schema Registry (Avro/Protobuf/JSON) for ML feature contracts
   - Metrics & monitoring (lag, ISR, partition skew)
-- module 3 — batch processing with Apache Spark
+- **module 3** — batch processing with Apache Spark
   - Spark fundamentals (RDD vs DataFrame API)
   - Reading from S3, JDBC, and Kafka
   - Transformations for ML (feature engineering in Spark)
   - Writing partitioned Parquet to S3 for offline ML training
   - Spark on AWS EMR vs standalone cluster on EC2
   - Optimization techniques (partitioning, bucketing, caching)
-- module 4 — streaming feature pipelines
+- **module 4** — streaming feature pipelines
   - Use cases for streaming in ML (fraud detection, recommender freshness, real-time personalization)
   - Building sliding window aggregations with Kafka Streams & Faust
   - Joining real-time data with static reference datasets
   - Handling late/out-of-order data
   - Monitoring freshness & processing latency
-- module 5 — data quality for ML
+- **module 5** — data quality for ML
   - Why ML needs stricter data quality checks
   - Great Expectations for batch pipelines
   - Pandera for Python dataframe validation
   - Detecting drift at the data layer (statistical checks pre-model)
   - Automated quality gates in CI/CD pipelines
-- module 6 — workflow orchestration with Airflow
+- **module 6** — workflow orchestration with Airflow
   - Airflow basics: DAGs, tasks, scheduling, retries
   - Setting up Airflow locally & on AWS EC2
   - Integrating batch feature engineering with Airflow DAGs
   - Sensors for data availability checks
   - Airflow with KubernetesPodOperator for scalable ML jobs
-- module 7 — integration with feature stores
+- **module 7** — integration with feature stores
   - Role of feature stores in MLOps
   - Connecting Kafka/Spark outputs to Feast
   - Offline vs online stores (S3/Parquet vs Redis/Postgres)
   - TTL & freshness guarantees
   - Example: ingesting Spark output to Feast for model training & real-time lookup
 
+---
 ### episode 05 — fraud detection pipeline on AWS (end-to-end real-time ML pipeline)
-- module 1 — project scaffolding, environment setup & cost guardrails
+- **module 1** — project scaffolding, environment setup & cost guardrails
   - Structuring the repository for an MLOps project (infra/, services/, features/, mlops/)
   - Setting up pre-commit hooks, linting, and tests (ruff, black, pytest)
   - AWS CLI profiles, SSM Parameter Store for secrets
   - AWS Budgets and cost alerts for student environments
   - Writing teardown scripts for resource cleanup
-- module 2 — streaming infrastructure with Kafka on AWS EC2
+- **module 2** — streaming infrastructure with Kafka on AWS EC2
   - Deploying a 3-broker Kafka cluster on EC2 with schema registry
   - Setting replication factor and ISR settings for fault tolerance
   - Creating topics for transactions, scores, and dead letters
   - Adding Kafka exporters for monitoring
   - Schema evolution and compatibility tests
-- module 3 — raw event storage (S3 + MongoDB)
+- **module 3** — raw event storage (S3 + MongoDB)
   - Streaming data ingestion from Kafka to S3 in partitioned Parquet format
   - Setting up MongoDB replica set for low-latency recent lookups
   - Configuring Kafka Connect S3 and Mongo sinks
   - TTL indexes in Mongo for cost control
   - Verifying data freshness and schema compliance
-- module 4 — experiment tracking & model registry with MLflow
+- **module 4** — experiment tracking & model registry with MLflow
   - Deploying MLflow on EC2 with RDS (PostgreSQL) backend and S3 artifact store
   - Enabling TLS and authentication via Nginx reverse proxy
   - Logging metrics, parameters, and artifacts from experiments
   - Registering and versioning models in the MLflow Model Registry
   - Integrating Prometheus metrics from MLflow
-- module 5 — baseline model training & logging
+- **module 5** — baseline model training & logging
   - Loading IEEE-CIS fraud dataset from S3
   - Performing time-based train-test splits to avoid leakage
   - Handling class imbalance (class weights, resampling)
   - Evaluating with PR-AUC, ROC-AUC, calibration curves
   - Logging all runs to MLflow with reproducibility artifacts
-- module 6 — feature store with Feast
+- **module 6** — feature store with Feast
   - Defining entities, features, and TTL policies
   - Using S3 for offline storage, Redis for online storage
   - Materializing features and performing online lookups
   - Integrating feature freshness and hit/miss metrics into Prometheus
-- module 7 — real-time feature aggregation
+- **module 7** — real-time feature aggregation
   - Implementing streaming aggregations (e.g., 5-min, 30-min transaction counts) with Kafka Streams or Faust
   - Backfilling features for historical data
   - Ensuring idempotency and correctness in streaming updates
-- module 8 — model serving — streaming scoring service
+- **module 8** — model serving — streaming scoring service
   - Building a Kafka consumer service to fetch features from Feast, score using MLflow model, publish scores to Kafka and S3
   - Handle failed events with a dead-letter topic
   - Performance tuning for p95 latency under 150ms
-- module 9 — ad-hoc prediction API with FastAPI
+- **module 9** — ad-hoc prediction API with FastAPI
   - Implementing an API for investigation teams
   - Single and batch prediction endpoints
   - API key authentication and rate limiting
   - Exposing Prometheus metrics for API health
-- module 10 — containerization & deployment to AWS
+- **module 10** — containerization & deployment to AWS
   - Containerizing all services with Docker
   - Multi-arch builds (ARM/x86) for EC2 Graviton
   - Pushing to AWS ECR with automated scans
   - Deploying scoring service and API in an Auto Scaling Group with ALB
-- module 11 — CI/CD for fraud detection services
+- **module 11** — CI/CD for fraud detection services
   - Building GitHub Actions workflows for building, testing, and deploying services
   - Canary and blue/green deployments with AWS CodeDeploy
   - Rollback strategies on latency/accuracy regression
-- module 12 — monitoring & observability
+- **module 12** — monitoring & observability
   - Setting up Prometheus on EC2 to scrape exporters from all components
   - Grafana dashboards for: inference latency, Kafka consumer lag, feature freshness, model health metrics
   - Alerting on SLO violations with Alertmanager + SNS/Slack
-- module 13 — load testing & latency optimization
+- **module 13** — load testing & latency optimization
   - Running load tests with Locust or k6
   - Identifying bottlenecks in feature lookup, model scoring, or Kafka
   - Tuning workers, connection pools, and caching layers
-- module 14 — continual learning & drift detection
+- **module 14** — continual learning & drift detection
   - Implementing Evidently AI for concept drift detection
   - Triggering retraining pipelines on drift events
   - Automating model evaluation gates before promotion
-- module 15 — governance, explainability & cost intelligence
+- **module 15** — governance, explainability & cost intelligence
   - Dataset and pipeline versioning with DVC
   - Feature contract tests to prevent train-serve skew
   - SHAP values for per-prediction explanations
   - Tracking cost per 1K predictions and gating deployments if cost regresses
 
+---
 ### episode 06 — Kubernetes for MLOps (Poridhi k8s cluster, EKS)
-- module 6.1 — kubernetes fundamentals for MLOps
+- **module 6.1** — kubernetes fundamentals for MLOps
   - Why Kubernetes is essential for modern ML pipelines
   - Kubernetes architecture: API server, scheduler, controller manager, kubelet, etcd
   - Pods, ReplicaSets, Deployments, Services, and Ingress
   - Kubernetes vs Docker Compose for ML workloads
   - Local development with K3s
   - Lab: Deploy a basic FastAPI ML service to K3s with a LoadBalancer service
-- module 6.2 — setting up Kubernetes environments (K3s & AWS EKS)
+- **module 6.2** — setting up Kubernetes environments (K3s & AWS EKS)
   - Installing K3s locally with Helm support
   - Creating an EKS cluster with Terraform (IaC approach)
   - Understanding EKS networking (VPC, CNI, security groups, IAM roles)
   - kubectl configuration & context switching between clusters
   - Lab: Deploy a sample ML API on both K3s and EKS, verify load balancing
-- module 6.3 — kubernetes resource management for ML
+- **module 6.3** — kubernetes resource management for ML
   - CPU, GPU, and memory requests & limits
   - GPU scheduling in Kubernetes (NVIDIA device plugin)
   - Node affinity, taints, and tolerations for ML workloads
   - Autoscaling: HPA (Horizontal Pod Autoscaler) & VPA (Vertical Pod Autoscaler)
   - Lab: Deploy a GPU-based inference service with autoscaling
-- module 6.4 — storage & data in Kubernetes
+- **module 6.4** — storage & data in Kubernetes
   - Persistent Volumes (PV) and Persistent Volume Claims (PVC) for ML
   - Mounting S3 buckets to pods (S3 CSI driver)
   - Connecting PVCs to ML training jobs
   - Managing feature store data in Feast with Kubernetes storage
   - Lab: Run an ML pipeline that reads/writes datasets from PVC/S3 inside Kubernetes
-- module 6.5 — networking & service exposure
+- **module 6.5** — networking & service exposure
   - ClusterIP, NodePort, LoadBalancer, and Ingress for ML services
   - NGINX ingress controller setup
   - Securing ML endpoints with TLS and authentication
   - Internal vs public-facing ML APIs
   - Lab: Deploy MLflow tracking server behind an NGINX ingress with TLS
-- module 6.6 — configurations, secrets, and environment management
+- **module 6.6** — configurations, secrets, and environment management
   - ConfigMaps for environment-specific configs
   - Secrets management with Kubernetes Secrets and AWS Secrets Manager
   - Rolling updates with zero downtime for ML models
   - Versioning model configurations
   - Lab: Deploy a versioned ML model service that loads configs from a ConfigMap
-- module 6.7 — observability for ML workloads in Kubernetes
+- **module 6.7** — observability for ML workloads in Kubernetes
   - Integrating Prometheus & Grafana with Kubernetes metrics
   - Collecting ML-specific metrics from pods (latency, throughput, drift)
   - Logging with Loki or EFK stack
   - Lab: Create a Grafana dashboard for an ML inference service deployed on EKS
-- module 6.8 — CI/CD for Kubernetes MLOps
+- **module 6.8** — CI/CD for Kubernetes MLOps
   - GitHub Actions -> EKS deploy pipeline
   - Canary and Blue/Green deployments for ML models
   - Rollbacks on performance degradation
   - Lab: Build a CI/CD pipeline that deploys a new model version to EKS and rolls back on SLO violation
 
+---
 ### episode 07 — Kubeflow pipelines for end-to-end orchestration on Kubernetes
-- module 8.1 — introduction to Kubeflow for MLOps
+- **module 8.1** — introduction to Kubeflow for MLOps
   - What is Kubeflow? Why it matters for production ML
   - Core components: Pipelines, KFServing, Katib, Metadata
   - Kubeflow vs Airflow vs Argo Workflows
   - Real-world use cases of Kubeflow in ML teams
-- module 8.2 — setting up Kubeflow on Kubernetes
+- **module 8.2** — setting up Kubeflow on Kubernetes
   - Deploying Kubeflow on AWS EKS using manifests/Helm
   - Configuring authentication (Dex, OIDC)
   - Integrating with AWS S3 for artifact storage
   - Connecting Kubeflow to an external MLflow tracking server
-- module 8.3 — creating your first ML pipeline
+- **module 8.3** — creating your first ML pipeline
   - Pipeline structure: components, DAGs, parameters
   - Writing Kubeflow components in Python
   - Passing data and artifacts between pipeline steps
   - Versioning pipelines and tracking executions
-- module 8.4 — advanced pipeline patterns
+- **module 8.4** — advanced pipeline patterns
   - Parallelism and conditional execution
   - Caching and skipping steps for faster reruns
   - Reusable components and shared libraries
   - Multi-model pipelines (ensembles, experiments)
-- module 8.5 — hyperparameter tuning with Katib
+- **module 8.5** — hyperparameter tuning with Katib
   - Katib architecture and integration with Kubeflow Pipelines
   - Defining search spaces and objectives
   - Distributed hyperparameter tuning
   - Logging Katib results to MLflow
-- module 8.6 — continuous training & deployment pipelines
+- **module 8.6** — continuous training & deployment pipelines
   - Automating retraining with new data triggers
   - CI/CD for pipelines using GitHub Actions and ArgoCD
   - Canary and blue/green deployments with KFServing
   - Integrating model registry (MLflow/Kubeflow)
-- module 8.7 — serving models with KFServing
+- **module 8.7** — serving models with KFServing
   - KFServing architecture and model serving patterns
   - Deploying models as REST and gRPC endpoints
   - Scaling inference services with autoscaling
   - A/B testing models in production
-- module 8.8 — monitoring & observability in Kubeflow
+- **module 8.8** — monitoring & observability in Kubeflow
   - Pipeline run metadata tracking
   - Exporting pipeline metrics to Prometheus/Grafana
   - Model performance monitoring in production
   - Drift detection integration with Evidently
 
+---
 ### episode 08 — distributed computing for ML with Ray
-- module 7.1 — introduction to Ray for MLOps
+- **module 7.1** — introduction to Ray for MLOps
   - Why Ray? Scaling beyond single-node training
   - Ray architecture: head node, worker nodes, object store
   - Ray vs Spark for ML workloads
   - Ray ecosystem: Ray Core, Ray Data, Ray Train, Ray Tune, Ray Serve, RLlib
   - Lab: Install Ray locally and run a distributed "Hello World" example
-- module 7.2 — running Ray on cloud & on Kubernetes
+- **module 7.2** — running Ray on cloud & on Kubernetes
   - Setting up Ray on AWS with multiple workers
   - Deploying Ray cluster on Kubernetes (Helm chart)
   - Connecting Ray cluster to AWS S3 and other cloud storage
   - Scaling up/down Ray workers dynamically
   - Lab: Deploy a Ray cluster on EKS and verify distributed task execution
-- module 7.3 — distributed data processing with Ray Data
+- **module 7.3** — distributed data processing with Ray Data
   - Reading/writing large datasets in parallel
   - Preprocessing pipelines for ML (feature engineering at scale)
   - Integrating Ray Data with Feature Stores (Feast, Redis)
   - Streaming vs batch data ingestion
   - Lab: Ingest and preprocess 10M+ records using Ray Data on Kubernetes
-- module 7.4 — distributed training with Ray Train
+- **module 7.4** — distributed training with Ray Train
   - Training ML/DL models across multiple GPUs/nodes
   - Distributed PyTorch & TensorFlow training with Ray
   - Fault tolerance & checkpointing
   - Using Spot Instances with Ray
   - Lab: Train a ResNet model with distributed PyTorch using Ray Train
-- module 7.5 — hyperparameter tuning with Ray Tune
+- **module 7.5** — hyperparameter tuning with Ray Tune
   - Defining search spaces and schedulers (ASHA, PBT, HyperBand)
   - Integrating with MLflow for experiment tracking
   - Distributed tuning on heterogeneous hardware
   - Early stopping strategies for cost savings
   - Lab: Run distributed hyperparameter search on AWS EKS with Ray Tune + MLflow
-- module 7.6 — serving models with Ray Serve
+- **module 7.6** — serving models with Ray Serve
   - Serving multiple models on a single Ray cluster
   - Scaling inference endpoints dynamically
   - Deploying ensemble models
   - Integrating Ray Serve with FastAPI and Kubernetes ingress
   - Lab: Deploy a Ray Serve model endpoint behind NGINX Ingress on EKS
-- module 7.7 — Ray for reinforcement learning
+- **module 7.7** — Ray for reinforcement learning
   - Intro to RLlib for distributed reinforcement learning
   - Multi-agent RL workflows
   - Logging RL experiments with MLflow
   - Lab: Train a CartPole RL agent using Ray RLlib on Kubernetes
-- module 7.8 — monitoring & debugging Ray workloads
+- **module 7.8** — monitoring & debugging Ray workloads
   - Ray Dashboard for cluster observability
   - Integrating Ray metrics into Prometheus/Grafana
   - Profiling distributed ML workloads
   - Debugging failed Ray tasks
   - Lab: Create a Grafana dashboard tracking Ray cluster health and ML workload performance
-- module 7.9 — CI/CD for Ray pipelines
+- **module 7.9** — CI/CD for Ray pipelines
   - Automating Ray pipeline deployments to Kubernetes
   - Canary deployment for distributed inference
   - Rollbacks & scaling policies
   - Lab: Deploy an updated Ray Serve model to EKS using GitHub Actions
 
+---
 ### episode 09 — building a scalable recommender system pipeline
-- module 9.1 — problem definition & system architecture
+- **module 9.1** — problem definition & system architecture
   - Understanding recommendation problem types (content-based, collaborative filtering, hybrid)
   - Business and ML requirements for recommender systems
   - High-level architecture on Kubernetes (data -> features -> model -> serving -> monitoring)
   - Components: Kubeflow Pipelines, Ray, Feast, KFServing, Prometheus/Grafana
-- module 9.2 — data ingestion & processing
+- **module 9.2** — data ingestion & processing
   - Sources: user interactions, item metadata, transaction history
   - Batch vs streaming ingestion in Kubernetes
   - Ingestion pipeline with Kafka for streaming events and Spark for batch
   - Schema design for recommendation datasets
-- module 9.3 — feature engineering with Feast
+- **module 9.3** — feature engineering with Feast
   - Setting up Feast in Kubernetes (Redis + S3)
   - Defining entities, features, and feature views for recommendations
   - Materializing offline -> online store
   - Handling TTL and freshness in real-time features
-- module 9.4 — distributed training with Ray on Kubernetes
+- **module 9.4** — distributed training with Ray on Kubernetes
   - Ray cluster setup on Kubernetes
   - Parallelizing model training (matrix factorization, deep learning-based recommenders)
   - Ray Tune for hyperparameter optimization
   - Integrating Ray with MLflow for experiment tracking
-- module 9.5 — orchestrating the pipeline with Kubeflow
+- **module 9.5** — orchestrating the pipeline with Kubeflow
   - Writing Kubeflow components for data ingestion, feature generation, model training, evaluation, and deployment
   - Defining pipeline parameters (dataset, hyperparameters, model type)
   - Scheduling periodic runs
-- module 9.6 — model evaluation & A/B testing
+- **module 9.6** — model evaluation & A/B testing
   - Offline evaluation metrics: precision@k, recall@k, MAP, NDCG
   - Online evaluation: A/B tests with live traffic
   - Canary deployments and traffic splitting with KFServing
-- module 9.7 — real-time serving with KFServing
+- **module 9.7** — real-time serving with KFServing
   - Deploying recommendation models as scalable REST endpoints
   - Handling feature lookups in real-time requests
   - Scaling inference with Ray Serve
-- module 9.8 — monitoring & observability
+- **module 9.8** — monitoring & observability
   - Tracking latency, throughput, and error rates for inference services
   - Monitoring model performance drift in recommendation quality
   - Creating Grafana dashboards for user engagement metrics
-- module 9.9 — continuous training & improvement
+- **module 9.9** — continuous training & improvement
   - Automating retraining with new interaction data
   - Incorporating user feedback for model updates
   - Automating feature recalculation and deployment
 
+---
 ### episode 10 — deep learning pipelines & model serving
-- module 1 — deep learning fundamentals in the MLOps context
+- **module 1** — deep learning fundamentals in the MLOps context
   - Why deep learning in production differs from academic DL
   - Brief overview of CNNs, RNNs, and Transformer-based architectures
   - Understanding compute requirements: CPU vs GPU vs TPU
   - Batch vs online inference
   - Data dependencies and versioning for DL workloads
   - Reproducibility in DL pipelines (seed setting, deterministic ops, containerized environments)
-- module 2 — data preprocessing pipelines for DL
+- **module 2** — data preprocessing pipelines for DL
   - Scalable preprocessing with Spark or Ray Data
   - Augmentation strategies for CV, NLP, and audio tasks
   - Ensuring consistent preprocessing in training & serving (feature parity)
   - Caching preprocessed datasets for speed and cost optimization
   - Using tf.data pipelines or PyTorch DataLoader for efficient streaming
-- module 3 — training deep learning models at scale
+- **module 3** — training deep learning models at scale
   - Multi-GPU training (Data Parallelism, Model Parallelism)
   - Mixed precision training for performance gains
   - Distributed training with Ray Train or PyTorch DDP
   - Hyperparameter tuning for DL (Ray Tune, Optuna)
   - Logging metrics, losses, and model artifacts in MLflow
   - Handling large datasets with streaming ingestion
-- module 4 — model packaging & versioning
+- **module 4** — model packaging & versioning
   - Exporting models in multiple formats: PyTorch (.pt or TorchScript), TensorFlow (SavedModel, TF Lite), ONNX for cross-framework compatibility
   - Model signatures and schema validation
   - Storing and managing versions in MLflow Model Registry
   - Automated CI tests for model compatibility before deployment
-- module 5 — serving deep learning models
+- **module 5** — serving deep learning models
   - FastAPI + Uvicorn/Gunicorn for DL inference APIs
   - Batch vs real-time endpoints
   - Using Ray Serve or TorchServe for scaling inference
   - GPU scheduling & resource allocation
   - Handling large models with lazy loading and warmup strategies
   - Integrating Prometheus metrics for inference performance
-- module 6 — GPU inference optimization
+- **module 6** — GPU inference optimization
   - TensorRT optimization
   - Quantization (dynamic, post-training, quantization-aware)
   - Model pruning and distillation for latency reduction
   - Profiling inference performance with NVIDIA Nsight and PyTorch profiler
   - Serving optimized models in production
-- module 7 — CI/CD for deep learning pipelines
+- **module 7** — CI/CD for deep learning pipelines
   - Building inference images with GPU base containers
   - Testing model performance in staging before promotion
   - Canary releases for DL models
   - Automating redeployment when a new model version passes benchmarks
-- module 8 — monitoring DL models in production
+- **module 8** — monitoring DL models in production
   - Latency, throughput, and GPU utilization tracking
   - Concept drift detection for DL models
   - Logging prediction explanations (e.g., Grad-CAM, SHAP for CNNs)
   - Triggering retraining workflows for DL models
 
+---
 ### episode 11 — anomaly detection in production
-- module 1 — project scaffolding, environment setup & cost guardrails
+- **module 1** — project scaffolding, environment setup & cost guardrails
   - Repository structure for streaming anomaly detection (infra/, services/, features/, mlops/)
   - Pre-commit hooks, linting, testing (ruff, black, pytest)
   - AWS CLI profiles, SSM Parameter Store for secrets
   - AWS Budgets and SNS alerts for infra spend
   - Automated teardown scripts for all AWS resources
-- module 2 — streaming infrastructure with Kafka on AWS EC2
+- **module 2** — streaming infrastructure with Kafka on AWS EC2
   - Deploy 3-broker Kafka cluster with schema registry
   - Configure replication factor, ISR, and retention for time-series workloads
   - Topics: raw_events, anomaly_scores, alerts, dead_letters
   - Enable Kafka JMX exporter for monitoring
   - Schema evolution and backward compatibility testing
-- module 3 — raw event storage & historical store
+- **module 3** — raw event storage & historical store
   - Stream ingestion from Kafka to S3 in partitioned Parquet format (for batch retraining)
   - MongoDB or PostgreSQL for low-latency lookup of recent events
   - Kafka Connect S3/Mongo/Postgres sinks
   - TTL indexes for storage cost optimization
   - Data freshness verification pipelines
-- module 4 — experiment tracking & model registry with MLflow
+- **module 4** — experiment tracking & model registry with MLflow
   - Deploy MLflow on EC2 with RDS + S3 backend
   - Secure with TLS + Nginx reverse proxy
   - Log anomaly detection experiments (Isolation Forest, Autoencoders, LSTM, etc.)
   - Version models in MLflow Model Registry
   - Expose metrics from MLflow to Prometheus
-- module 5 — baseline model training & evaluation
+- **module 5** — baseline model training & evaluation
   - Use simulated IoT/financial/log data for anomalies
   - Handle extreme class imbalance
   - Evaluate with precision-recall curves, F1@fixed recall, anomaly score distributions
   - Log parameters, metrics, and artifacts to MLflow
   - Store train/test splits in DVC for reproducibility
-- module 6 — feature store with Feast
+- **module 6** — feature store with Feast
   - Define entities (device_id, account_id) and anomaly-relevant features
   - Use S3 for offline store, Redis for online store
   - Materialize real-time features for streaming scoring
   - Monitor feature hit/miss ratio with Prometheus
-- module 7 — real-time feature aggregation
+- **module 7** — real-time feature aggregation
   - Compute rolling statistics (mean, std dev, min/max) over multiple windows (5 min, 1 hr, 24 hr)
   - Implement aggregations using Kafka Streams / Faust
   - Backfill missing features from historical store
   - Ensure consistency between batch and streaming pipelines
-- module 8 — model serving — streaming anomaly detection service
+- **module 8** — model serving — streaming anomaly detection service
   - Kafka consumer fetches features from Feast
   - Scores events using deployed MLflow model
   - Publishes anomaly scores to Kafka + writes to S3 for audit
   - Dead-letter handling for invalid events
   - Maintain p95 latency < 200ms
-- module 9 — alerting API with FastAPI
+- **module 9** — alerting API with FastAPI
   - Expose REST API for on-demand anomaly checks
   - Endpoint for batch investigation
   - API key auth + rate limiting
   - Prometheus metrics for API health & anomaly counts
-- module 10 — containerization & deployment
+- **module 10** — containerization & deployment
   - Containerize services with Docker
   - Optimize images for low cold-start latency
   - Push to ECR with vulnerability scans
   - Deploy on EC2 Auto Scaling Group or EKS
   - Load balancing via ALB/NLB
-- module 11 — CI/CD for anomaly detection
+- **module 11** — CI/CD for anomaly detection
   - GitHub Actions workflows for test -> build -> deploy
   - Canary deploys with AWS CodeDeploy
   - Automated rollback on regression in latency or alert volume
-- module 12 — monitoring & observability
+- **module 12** — monitoring & observability
   - Prometheus to scrape metrics from all services
   - Grafana dashboards for: anomaly detection rate, consumer lag, feature freshness, model scoring latency
   - Alertmanager rules for anomaly spikes & system failures
-- module 13 — load testing & latency optimization
+- **module 13** — load testing & latency optimization
   - Simulate high event throughput with Locust/k6
   - Identify bottlenecks in feature lookup, scoring, and Kafka consumers
   - Optimize workers, concurrency, and batch processing
-- module 14 — continual learning & drift detection
+- **module 14** — continual learning & drift detection
   - Use Evidently AI for detecting concept drift & data drift
   - Retrain model automatically on confirmed drifts
   - Validate retrained model before promotion to production
 
+---
 ### episode 12 — computer vision pipeline with distributed training & deployment
-- module 10.1 — problem definition & use cases
+- **module 10.1** — problem definition & use cases
   - Common CV tasks: image classification, object detection, segmentation
   - Use case selection (e.g., real-time defect detection, product tagging)
   - Business KPIs vs ML metrics
   - High-level architecture: ingestion -> preprocessing -> training -> deployment -> monitoring
   - Lab: Draft the architecture diagram for the chosen CV application
-- module 10.2 — data acquisition & storage
+- **module 10.2** — data acquisition & storage
   - Sources: datasets (ImageNet, COCO), customer uploads, camera streams
   - Batch ingestion from S3 and streaming ingestion with Kafka
   - Data storage strategy in cloud (S3 bucket partitioning, lifecycle policies)
   - Lab: Set up an S3-based image dataset repository with metadata indexing in PostgreSQL
-- module 10.3 — data preprocessing & augmentation
+- **module 10.3** — data preprocessing & augmentation
   - Preprocessing pipelines (resize, normalization, augmentation)
   - Leveraging GPU acceleration (NVIDIA DALI, OpenCV with CUDA)
   - Augmentation strategies for better generalization
   - Lab: Implement a GPU-accelerated data preprocessing pipeline and log outputs to S3
-- module 10.4 — distributed training with Ray
+- **module 10.4** — distributed training with Ray
   - Ray cluster setup for distributed deep learning
   - Integrating PyTorch DistributedDataParallel (DDP) with Ray
   - Ray Tune for hyperparameter search (learning rate, batch size, augmentations)
   - Tracking experiments with MLflow
   - Lab: Train a ResNet-based model with Ray on Kubernetes and log results to MLflow
-- module 10.5 — model evaluation
+- **module 10.5** — model evaluation
   - Evaluation metrics for CV (accuracy, mAP, IoU)
   - Error analysis and confusion matrix interpretation
   - Logging evaluation artifacts to MLflow
   - Lab: Evaluate trained model and upload confusion matrix & sample predictions to MLflow
-- module 10.6 — model optimization with TensorRT
+- **module 10.6** — model optimization with TensorRT
   - Introduction to model compression (quantization, pruning)
   - Converting PyTorch/TensorFlow models to TensorRT
   - Benchmarking latency & throughput improvements
   - Lab: Optimize the trained model with TensorRT and measure performance gains
-- module 10.7 — deployment with KFServing
+- **module 10.7** — deployment with KFServing
   - Containerizing the optimized model
   - KFServing deployment for scalable inference
   - GPU scheduling in Kubernetes
   - Canary deployments for new CV model versions
   - Lab: Deploy TensorRT-optimized model on KFServing with GPU autoscaling
-- module 10.8 — real-time inference
+- **module 10.8** — real-time inference
   - Streaming inference pipeline
   - Handling variable versions and resolution
   - Scaling inference workloads in Kubernetes
   - Lab: Deploy a FastAPI service for real-time video object detection with WebSocket streaming
-- module 10.9 — monitoring & drift detection
+- **module 10.9** — monitoring & drift detection
   - Monitoring inference latency, FPS, and GPU utilization
   - Detecting data distribution drift in images
   - Integrating EvidentlyAI with Prometheus/Grafana
   - Lab: Build Grafana dashboards for GPU metrics and drift monitoring
-- module 10.10 — continuous training & automation
+- **module 10.10** — continuous training & automation
   - Automating model retraining when drift or degradation is detected
   - Updating TensorRT optimizations in retraining
   - Kubeflow Pipelines for automated retraining cycles
   - Lab: Create a Kubeflow retraining pipeline triggered by drift alerts
 
+---
 ### episode 13 — NLP & LLM engineering at scale
-- module 1 — project scaffolding, environment setup & cost guardrails
+- **module 1** — project scaffolding, environment setup & cost guardrails
   - Repo structure for multi-model NLP project (infra/, datasets/, models/, pipelines/, services/)
   - Poetry or uv for dependency management, pre-commit hooks, linting (ruff, black), testing (pytest)
   - AWS CLI profiles, SSM Parameter Store for credentials
   - Cost monitoring with AWS Budgets & teardown scripts
   - GPU-aware environment setup (CUDA, cuDNN, NCCL)
-- module 2 — NLP data engineering & preprocessing
+- **module 2** — NLP data engineering & preprocessing
   - Building a text ingestion pipeline from S3 + Kafka
   - Data cleaning, deduplication, tokenization (Hugging Face Tokenizers, SentencePiece)
   - Generating and storing embeddings in Qdrant / PostgreSQL + pgvector
   - Versioning datasets with DVC (storing raw + preprocessed versions)
   - Parallel preprocessing with Ray Data
-- module 3 — experiment tracking & model registry with MLflow
+- **module 3** — experiment tracking & model registry with MLflow
   - Tracking BERT fine-tunes, embedding models, and LLM pretraining runs
   - Logging training loss, eval metrics, confusion matrices, embeddings visualizations
   - Registering models in MLflow Model Registry with stage transitions (dev -> staging -> prod)
   - Integrating MLflow with Ray Tune for distributed hyperparameter search
-- module 4 — applied NLP model development
+- **module 4** — applied NLP model development
   - Fine-tuning BERT / RoBERTa for classification, NER, QA
   - Using LoRA / PEFT for parameter-efficient fine-tuning
   - Evaluating with F1, macro/micro precision-recall, exact match (QA)
   - Exporting to ONNX/TensorRT for optimized inference
-- module 5 — LLM from scratch — architecture & training
+- **module 5** — LLM from scratch — architecture & training
   - Implementing Transformer architecture (multi-head attention, feed-forward, layer norm) in PyTorch
   - Pretraining on a curated corpus (wiki + domain-specific data) using Ray Train for distributed multi-GPU training
   - Mixed-precision (fp16/bf16) & gradient checkpointing for efficiency
   - Evaluating perplexity, next-token prediction accuracy
   - Saving checkpoints to S3 with metadata for reproducibility
-- module 6 — feature store for NLP pipelines
+- **module 6** — feature store for NLP pipelines
   - Using Feast to store reusable features (text embeddings, entity frequency tables)
   - Redis for online store, S3 for offline store
   - Materializing features for batch and streaming NLP pipelines
-- module 7 — deployment infrastructure for NLP models
+- **module 7** — deployment infrastructure for NLP models
   - Deploying inference endpoints with Ray Serve (multi-model routing: BERT classifier, embedding service, LLM)
   - Containerizing services with GPU-enabled Docker images
   - Deploying on k8s with GPU nodes & autoscaling
   - Load testing inference with Locust/k6 for latency and throughput
-- module 8 — retrieval-augmented generation (RAG) pipeline
+- **module 8** — retrieval-augmented generation (RAG) pipeline
   - Vector DB setup (Qdrant, OpenSearch, pgvector) for context retrieval
   - Building RAG workflow for LLM with Ray Serve pipelines
   - Integrating with FastAPI API layer for user queries
   - Caching retrieved contexts with Redis for hot queries
-- module 9 — API development & model serving
+- **module 9** — API development & model serving
   - REST & gRPC endpoints for: text classification, embedding generation, LLM completion/generation
   - API key authentication & request quotas
   - Prometheus metrics for request volume, latency, model hit ratios
-- module 10 — CI/CD for NLP & LLM
+- **module 10** — CI/CD for NLP & LLM
   - GitHub Actions workflows for: data pipeline tests, model evaluation gates (accuracy, latency, cost), canary deployments of new model versions
   - Rollback automation on metric regression
-- module 11 — monitoring & observability
+- **module 11** — monitoring & observability
   - Prometheus + Grafana dashboards for: token generation latency, GPU utilization & memory, context retrieval latency, drift in embeddings space
   - Alertmanager rules for: latency spikes, GPU saturation, drop in model accuracy (via shadow testing)
-- module 12 — continual learning & fine-tuning in production
+- **module 12** — continual learning & fine-tuning in production
   - Automated feedback loops to capture real-world queries & responses
   - Daily incremental fine-tuning with Ray on recent data
   - Model validation before deployment to production
 
+---
 ### episode 14 — time series prediction pipeline in edge deployment
-- module 1 — project scaffolding, environment setup & cost guardrails
+- **module 1** — project scaffolding, environment setup & cost guardrails
   - Repository layout for time series projects (infra/, data/, models/, pipelines/, services/)
   - Poetry or uv for dependency management
   - Pre-commit hooks, linting (ruff, black), testing (pytest)
   - AWS CLI profile + SSM Parameter Store for credentials
   - GPU/CPU-aware environment setup for deep learning-based forecasting models
   - AWS Budgets & cost alerts, teardown automation for EC2/EKS resources
-- module 2 — time series data engineering & preprocessing
+- **module 2** — time series data engineering & preprocessing
   - Ingesting streaming time series data from Kafka and batch data from S3
   - Resampling, missing value imputation, and time zone normalization
   - Windowed feature creation (rolling averages, lags, seasonal indicators)
   - Handling multiple time series (entity-based forecasting)
   - Versioning datasets with DVC (both raw and transformed datasets)
   - Distributed preprocessing using Ray Data
-- module 3 — experiment tracking & model registry with MLflow
+- **module 3** — experiment tracking & model registry with MLflow
   - Logging parameters, metrics (MAE, RMSE, MAPE), forecast plots
   - Storing models with metadata (forecast horizon, data frequency)
   - Registering models for batch vs. streaming use cases
   - Integrating Ray Tune for distributed hyperparameter optimization
-- module 4 — baseline & advanced forecasting models
+- **module 4** — baseline & advanced forecasting models
   - Classical: ARIMA, Prophet, ETS
   - Deep learning: LSTM, GRU, Temporal Convolutional Networks (TCN), Transformer-based forecasting models (Informer, TFT)
   - Distributed training with Ray Train across multiple GPUs/CPUs
   - Mixed precision training for efficiency
-- module 5 — feature store for time series
+- **module 5** — feature store for time series
   - Using Feast to store derived features (rolling statistics, seasonal encodings, anomalies)
   - Redis for online feature store, S3 for offline store
   - Materialization pipelines for low-latency lookups during inference
-- module 6 — batch forecasting pipeline
+- **module 6** — batch forecasting pipeline
   - Scheduled batch inference jobs with Kubeflow Pipelines
   - Exporting forecasts to S3, RDS, and BI tools
   - Automating report generation with AWS Lambda
-- module 7 — real-time forecasting pipeline
+- **module 7** — real-time forecasting pipeline
   - Streaming ingestion with Kafka -> real-time feature aggregation -> inference endpoint
   - Handling late-arriving data with watermarking
   - Ensuring inference SLA (p95 latency < 200ms)
-- module 8 — deployment infrastructure
+- **module 8** — deployment infrastructure
   - Containerizing forecasting services with Docker (CPU & GPU variants)
   - Multi-model serving with Ray Serve
   - Deploying to AWS EKS with GPU autoscaling
   - Canary deployments for new forecasting models
-- module 9 — API development & edge/mobile deployment
+- **module 9** — API development & edge/mobile deployment
   - FastAPI service exposing endpoints for: single entity forecast, multi-entity batch forecast, model metadata retrieval
   - Exporting lightweight models (ONNX, TensorRT) for mobile & edge
   - Deploying to Android app for on-device inference (TFLite, PyTorch Mobile)
-- module 10 — CI/CD for time series models
+- **module 10** — CI/CD for time series models
   - GitHub Actions workflows for pipeline testing, model validation, and automated deployment
   - Model evaluation gates (accuracy thresholds, latency limits)
   - Rollback workflows for performance regressions
-- module 11 — monitoring & observability
+- **module 11** — monitoring & observability
   - Prometheus + Grafana dashboards for: forecast accuracy over time, latency of streaming/batch predictions, drift in seasonal patterns
   - Alertmanager rules for: drop in accuracy, increased forecast error variance
-- module 12 — drift detection & continual learning
+- **module 12** — drift detection & continual learning
   - Using Evidently AI for detecting concept drift (seasonality changes, trends)
   - Triggering retraining workflows via Kubeflow Pipelines on drift detection
   - Automating data ingestion for retraining sets
 
+---
 ### episode 15 — advanced operational MLOps practices
-- module 1 — advanced monitoring & observability
+- **module 1** — advanced monitoring & observability
   - Deep-dive into model-specific metrics: data drift, concept drift, model confidence calibration
   - Prediction-serving latency, throughput, and error rates
   - Advanced Prometheus usage: recording rules, custom exporters, remote storage
   - Grafana alerting with anomaly detection panels
   - Linking model health metrics to incident management systems (PagerDuty, OpsGenie)
-- module 2 — drift detection & automated responses
+- **module 2** — drift detection & automated responses
   - Statistical drift detection (Kolmogorov-Smirnov test, PSI, KL divergence)
   - Tooling: Evidently AI, Fiddler AI, WhyLabs integration
   - Building a drift monitoring pipeline that triggers Slack/SNS alerts
   - Auto-triggering retraining pipelines on drift threshold breaches
-- module 3 — continual learning & incremental retraining
+- **module 3** — continual learning & incremental retraining
   - Streaming retraining with Kafka or Kinesis
   - Incremental model updates (online learning, warm-start retraining)
   - Rolling deployment of updated models with canary testing
   - Gatekeeping new models with automated regression tests
-- module 4 — security & compliance for ML systems
+- **module 4** — security & compliance for ML systems
   - IAM least privilege strategies for ML workloads
   - Data encryption at rest (S3 SSE-KMS, EBS encryption) and in transit (TLS everywhere)
   - Handling PII and sensitive data with compliance standards (GDPR, HIPAA)
   - Auditing and logging access to ML models and datasets
-- module 5 — cost management & efficiency
+- **module 5** — cost management & efficiency
   - Cost breakdowns for storage, compute, network egress in ML workloads
   - Auto-scaling with target utilization policies
   - Spot instance strategies for training workloads
   - Auto-teardown scripts for unused environments (cron, AWS Lambda)
-- module 6 — self-healing pipelines
+- **module 6** — self-healing pipelines
   - Detecting and recovering from service crashes (K8s liveness/readiness probes)
   - Automating pipeline restarts on failure (Airflow, Kubeflow retries)
   - Rollback to last known good model/service on failure
   - Synthetic data injection for resilience testing
-- module 7 — auditability, explainability & trust
+- **module 7** — auditability, explainability & trust
   - Logging model lineage: data versions, feature store snapshots, model artifact hash
   - Explainability methods: SHAP, LIME, Captum for DL models
   - Integrating explainability reports into monitoring dashboards
   - Maintaining human-in-the-loop review for high-risk predictions
-- module 8 — cross-project integration patterns
+- **module 8** — cross-project integration patterns
   - Creating reusable MLOps components (e.g., feature store connectors, alerting templates)
   - Setting up centralized ML observability dashboards across multiple projects
   - Shared data contracts for consistent schema validation across services
 
+---
 ### resource link
 - [mlflow-docs](https://mlflow.org/docs/latest/ml)
 - [শেখার পেছনের দর্শন](https://rakibul-hassan.gitbook.io/ml-python-scikit-learn/undefined/philosophy-backed-learning)
