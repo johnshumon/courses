@@ -1,0 +1,63 @@
+---
+tags: [ "mlops", "time-series", "forecasting", "edge-deployment", "mobile" ]
+title: episode-14
+---
+
+## Episode 14
+
+- **module 1** — project scaffolding, environment setup & cost guardrails
+  - Repository layout for time series projects (infra/, data/, models/, pipelines/, services/)
+  - Poetry or uv for dependency management
+  - Pre-commit hooks, linting (ruff, black), testing (pytest)
+  - AWS CLI profile + SSM Parameter Store for credentials
+  - GPU/CPU-aware environment setup for deep learning-based forecasting models
+  - AWS Budgets & cost alerts, teardown automation for EC2/EKS resources
+- **module 2** — time series data engineering & preprocessing
+  - Ingesting streaming time series data from Kafka and batch data from S3
+  - Resampling, missing value imputation, and time zone normalization
+  - Windowed feature creation (rolling averages, lags, seasonal indicators)
+  - Handling multiple time series (entity-based forecasting)
+  - Versioning datasets with DVC (both raw and transformed datasets)
+  - Distributed preprocessing using Ray Data
+- **module 3** — experiment tracking & model registry with MLflow
+  - Logging parameters, metrics (MAE, RMSE, MAPE), forecast plots
+  - Storing models with metadata (forecast horizon, data frequency)
+  - Registering models for batch vs. streaming use cases
+  - Integrating Ray Tune for distributed hyperparameter optimization
+- **module 4** — baseline & advanced forecasting models
+  - Classical: ARIMA, Prophet, ETS
+  - Deep learning: LSTM, GRU, Temporal Convolutional Networks (TCN), Transformer-based forecasting models (Informer, TFT)
+  - Distributed training with Ray Train across multiple GPUs/CPUs
+  - Mixed precision training for efficiency
+- **module 5** — feature store for time series
+  - Using Feast to store derived features (rolling statistics, seasonal encodings, anomalies)
+  - Redis for online feature store, S3 for offline store
+  - Materialization pipelines for low-latency lookups during inference
+- **module 6** — batch forecasting pipeline
+  - Scheduled batch inference jobs with Kubeflow Pipelines
+  - Exporting forecasts to S3, RDS, and BI tools
+  - Automating report generation with AWS Lambda
+- **module 7** — real-time forecasting pipeline
+  - Streaming ingestion with Kafka -> real-time feature aggregation -> inference endpoint
+  - Handling late-arriving data with watermarking
+  - Ensuring inference SLA (p95 latency < 200ms)
+- **module 8** — deployment infrastructure
+  - Containerizing forecasting services with Docker (CPU & GPU variants)
+  - Multi-model serving with Ray Serve
+  - Deploying to AWS EKS with GPU autoscaling
+  - Canary deployments for new forecasting models
+- **module 9** — API development & edge/mobile deployment
+  - FastAPI service exposing endpoints for: single entity forecast, multi-entity batch forecast, model metadata retrieval
+  - Exporting lightweight models (ONNX, TensorRT) for mobile & edge
+  - Deploying to Android app for on-device inference (TFLite, PyTorch Mobile)
+- **module 10** — CI/CD for time series models
+  - GitHub Actions workflows for pipeline testing, model validation, and automated deployment
+  - Model evaluation gates (accuracy thresholds, latency limits)
+  - Rollback workflows for performance regressions
+- **module 11** — monitoring & observability
+  - Prometheus + Grafana dashboards for: forecast accuracy over time, latency of streaming/batch predictions, drift in seasonal patterns
+  - Alertmanager rules for: drop in accuracy, increased forecast error variance
+- **module 12** — drift detection & continual learning
+  - Using Evidently AI for detecting concept drift (seasonality changes, trends)
+  - Triggering retraining workflows via Kubeflow Pipelines on drift detection
+  - Automating data ingestion for retraining sets

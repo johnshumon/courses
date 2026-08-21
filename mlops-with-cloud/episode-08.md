@@ -1,0 +1,59 @@
+---
+tags: [ "mlops", "ray", "distributed-computing" ]
+title: episode-08
+---
+
+## Episode 08
+
+- **module 7.1** — introduction to Ray for MLOps
+  - Why Ray? Scaling beyond single-node training
+  - Ray architecture: head node, worker nodes, object store
+  - Ray vs Spark for ML workloads
+  - Ray ecosystem: Ray Core, Ray Data, Ray Train, Ray Tune, Ray Serve, RLlib
+  - Lab: Install Ray locally and run a distributed "Hello World" example
+- **module 7.2** — running Ray on cloud & on Kubernetes
+  - Setting up Ray on AWS with multiple workers
+  - Deploying Ray cluster on Kubernetes (Helm chart)
+  - Connecting Ray cluster to AWS S3 and other cloud storage
+  - Scaling up/down Ray workers dynamically
+  - Lab: Deploy a Ray cluster on EKS and verify distributed task execution
+- **module 7.3** — distributed data processing with Ray Data
+  - Reading/writing large datasets in parallel
+  - Preprocessing pipelines for ML (feature engineering at scale)
+  - Integrating Ray Data with Feature Stores (Feast, Redis)
+  - Streaming vs batch data ingestion
+  - Lab: Ingest and preprocess 10M+ records using Ray Data on Kubernetes
+- **module 7.4** — distributed training with Ray Train
+  - Training ML/DL models across multiple GPUs/nodes
+  - Distributed PyTorch & TensorFlow training with Ray
+  - Fault tolerance & checkpointing
+  - Using Spot Instances with Ray
+  - Lab: Train a ResNet model with distributed PyTorch using Ray Train
+- **module 7.5** — hyperparameter tuning with Ray Tune
+  - Defining search spaces and schedulers (ASHA, PBT, HyperBand)
+  - Integrating with MLflow for experiment tracking
+  - Distributed tuning on heterogeneous hardware
+  - Early stopping strategies for cost savings
+  - Lab: Run distributed hyperparameter search on AWS EKS with Ray Tune + MLflow
+- **module 7.6** — serving models with Ray Serve
+  - Serving multiple models on a single Ray cluster
+  - Scaling inference endpoints dynamically
+  - Deploying ensemble models
+  - Integrating Ray Serve with FastAPI and Kubernetes ingress
+  - Lab: Deploy a Ray Serve model endpoint behind NGINX Ingress on EKS
+- **module 7.7** — Ray for reinforcement learning
+  - Intro to RLlib for distributed reinforcement learning
+  - Multi-agent RL workflows
+  - Logging RL experiments with MLflow
+  - Lab: Train a CartPole RL agent using Ray RLlib on Kubernetes
+- **module 7.8** — monitoring & debugging Ray workloads
+  - Ray Dashboard for cluster observability
+  - Integrating Ray metrics into Prometheus/Grafana
+  - Profiling distributed ML workloads
+  - Debugging failed Ray tasks
+  - Lab: Create a Grafana dashboard tracking Ray cluster health and ML workload performance
+- **module 7.9** — CI/CD for Ray pipelines
+  - Automating Ray pipeline deployments to Kubernetes
+  - Canary deployment for distributed inference
+  - Rollbacks & scaling policies
+  - Lab: Deploy an updated Ray Serve model to EKS using GitHub Actions

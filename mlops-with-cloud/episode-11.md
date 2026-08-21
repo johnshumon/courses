@@ -1,0 +1,80 @@
+---
+tags: [ "mlops", "anomaly-detection", "aws", "kafka", "feast", "mlflow" ]
+title: episode-11
+---
+
+## Episode 11
+
+- **module 1** — project scaffolding, environment setup & cost guardrails
+  - Repository structure for streaming anomaly detection (infra/, services/, features/, mlops/)
+  - Pre-commit hooks, linting, testing (ruff, black, pytest)
+  - AWS CLI profiles, SSM Parameter Store for secrets
+  - AWS Budgets and SNS alerts for infra spend
+  - Automated teardown scripts for all AWS resources
+- **module 2** — streaming infrastructure with Kafka on AWS EC2
+  - Deploy 3-broker Kafka cluster with schema registry
+  - Configure replication factor, ISR, and retention for time-series workloads
+  - Topics: raw_events, anomaly_scores, alerts, dead_letters
+  - Enable Kafka JMX exporter for monitoring
+  - Schema evolution and backward compatibility testing
+- **module 3** — raw event storage & historical store
+  - Stream ingestion from Kafka to S3 in partitioned Parquet format (for batch retraining)
+  - MongoDB or PostgreSQL for low-latency lookup of recent events
+  - Kafka Connect S3/Mongo/Postgres sinks
+  - TTL indexes for storage cost optimization
+  - Data freshness verification pipelines
+- **module 4** — experiment tracking & model registry with MLflow
+  - Deploy MLflow on EC2 with RDS + S3 backend
+  - Secure with TLS + Nginx reverse proxy
+  - Log anomaly detection experiments (Isolation Forest, Autoencoders, LSTM, etc.)
+  - Version models in MLflow Model Registry
+  - Expose metrics from MLflow to Prometheus
+- **module 5** — baseline model training & evaluation
+  - Use simulated IoT/financial/log data for anomalies
+  - Handle extreme class imbalance
+  - Evaluate with precision-recall curves, F1@fixed recall, anomaly score distributions
+  - Log parameters, metrics, and artifacts to MLflow
+  - Store train/test splits in DVC for reproducibility
+- **module 6** — feature store with Feast
+  - Define entities (device_id, account_id) and anomaly-relevant features
+  - Use S3 for offline store, Redis for online store
+  - Materialize real-time features for streaming scoring
+  - Monitor feature hit/miss ratio with Prometheus
+- **module 7** — real-time feature aggregation
+  - Compute rolling statistics (mean, std dev, min/max) over multiple windows (5 min, 1 hr, 24 hr)
+  - Implement aggregations using Kafka Streams / Faust
+  - Backfill missing features from historical store
+  - Ensure consistency between batch and streaming pipelines
+- **module 8** — model serving — streaming anomaly detection service
+  - Kafka consumer fetches features from Feast
+  - Scores events using deployed MLflow model
+  - Publishes anomaly scores to Kafka + writes to S3 for audit
+  - Dead-letter handling for invalid events
+  - Maintain p95 latency < 200ms
+- **module 9** — alerting API with FastAPI
+  - Expose REST API for on-demand anomaly checks
+  - Endpoint for batch investigation
+  - API key auth + rate limiting
+  - Prometheus metrics for API health & anomaly counts
+- **module 10** — containerization & deployment
+  - Containerize services with Docker
+  - Optimize images for low cold-start latency
+  - Push to ECR with vulnerability scans
+  - Deploy on EC2 Auto Scaling Group or EKS
+  - Load balancing via ALB/NLB
+- **module 11** — CI/CD for anomaly detection
+  - GitHub Actions workflows for test -> build -> deploy
+  - Canary deploys with AWS CodeDeploy
+  - Automated rollback on regression in latency or alert volume
+- **module 12** — monitoring & observability
+  - Prometheus to scrape metrics from all services
+  - Grafana dashboards for: anomaly detection rate, consumer lag, feature freshness, model scoring latency
+  - Alertmanager rules for anomaly spikes & system failures
+- **module 13** — load testing & latency optimization
+  - Simulate high event throughput with Locust/k6
+  - Identify bottlenecks in feature lookup, scoring, and Kafka consumers
+  - Optimize workers, concurrency, and batch processing
+- **module 14** — continual learning & drift detection
+  - Use Evidently AI for detecting concept drift & data drift
+  - Retrain model automatically on confirmed drifts
+  - Validate retrained model before promotion to production

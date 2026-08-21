@@ -1,0 +1,55 @@
+---
+tags: [ "mlops", "deep-learning", "gpu", "tensorrt", "model-serving" ]
+title: episode-10
+---
+
+## Episode 10
+
+- **module 1** — deep learning fundamentals in the MLOps context
+  - Why deep learning in production differs from academic DL
+  - Brief overview of CNNs, RNNs, and Transformer-based architectures
+  - Understanding compute requirements: CPU vs GPU vs TPU
+  - Batch vs online inference
+  - Data dependencies and versioning for DL workloads
+  - Reproducibility in DL pipelines (seed setting, deterministic ops, containerized environments)
+- **module 2** — data preprocessing pipelines for DL
+  - Scalable preprocessing with Spark or Ray Data
+  - Augmentation strategies for CV, NLP, and audio tasks
+  - Ensuring consistent preprocessing in training & serving (feature parity)
+  - Caching preprocessed datasets for speed and cost optimization
+  - Using tf.data pipelines or PyTorch DataLoader for efficient streaming
+- **module 3** — training deep learning models at scale
+  - Multi-GPU training (Data Parallelism, Model Parallelism)
+  - Mixed precision training for performance gains
+  - Distributed training with Ray Train or PyTorch DDP
+  - Hyperparameter tuning for DL (Ray Tune, Optuna)
+  - Logging metrics, losses, and model artifacts in MLflow
+  - Handling large datasets with streaming ingestion
+- **module 4** — model packaging & versioning
+  - Exporting models in multiple formats: PyTorch (.pt or TorchScript), TensorFlow (SavedModel, TF Lite), ONNX for cross-framework compatibility
+  - Model signatures and schema validation
+  - Storing and managing versions in MLflow Model Registry
+  - Automated CI tests for model compatibility before deployment
+- **module 5** — serving deep learning models
+  - FastAPI + Uvicorn/Gunicorn for DL inference APIs
+  - Batch vs real-time endpoints
+  - Using Ray Serve or TorchServe for scaling inference
+  - GPU scheduling & resource allocation
+  - Handling large models with lazy loading and warmup strategies
+  - Integrating Prometheus metrics for inference performance
+- **module 6** — GPU inference optimization
+  - TensorRT optimization
+  - Quantization (dynamic, post-training, quantization-aware)
+  - Model pruning and distillation for latency reduction
+  - Profiling inference performance with NVIDIA Nsight and PyTorch profiler
+  - Serving optimized models in production
+- **module 7** — CI/CD for deep learning pipelines
+  - Building inference images with GPU base containers
+  - Testing model performance in staging before promotion
+  - Canary releases for DL models
+  - Automating redeployment when a new model version passes benchmarks
+- **module 8** — monitoring DL models in production
+  - Latency, throughput, and GPU utilization tracking
+  - Concept drift detection for DL models
+  - Logging prediction explanations (e.g., Grad-CAM, SHAP for CNNs)
+  - Triggering retraining workflows for DL models

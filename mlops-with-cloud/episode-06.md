@@ -1,0 +1,54 @@
+---
+tags: [ "mlops", "kubernetes", "k3s", "eks", "kubectl" ]
+title: episode-06
+---
+
+## Episode 06
+
+- **module 6.1** — kubernetes fundamentals for MLOps
+  - Why Kubernetes is essential for modern ML pipelines
+  - Kubernetes architecture: API server, scheduler, controller manager, kubelet, etcd
+  - Pods, ReplicaSets, Deployments, Services, and Ingress
+  - Kubernetes vs Docker Compose for ML workloads
+  - Local development with K3s
+  - Lab: Deploy a basic FastAPI ML service to K3s with a LoadBalancer service
+- **module 6.2** — setting up Kubernetes environments (K3s & AWS EKS)
+  - Installing K3s locally with Helm support
+  - Creating an EKS cluster with Terraform (IaC approach)
+  - Understanding EKS networking (VPC, CNI, security groups, IAM roles)
+  - kubectl configuration & context switching between clusters
+  - Lab: Deploy a sample ML API on both K3s and EKS, verify load balancing
+- **module 6.3** — kubernetes resource management for ML
+  - CPU, GPU, and memory requests & limits
+  - GPU scheduling in Kubernetes (NVIDIA device plugin)
+  - Node affinity, taints, and tolerations for ML workloads
+  - Autoscaling: HPA (Horizontal Pod Autoscaler) & VPA (Vertical Pod Autoscaler)
+  - Lab: Deploy a GPU-based inference service with autoscaling
+- **module 6.4** — storage & data in Kubernetes
+  - Persistent Volumes (PV) and Persistent Volume Claims (PVC) for ML
+  - Mounting S3 buckets to pods (S3 CSI driver)
+  - Connecting PVCs to ML training jobs
+  - Managing feature store data in Feast with Kubernetes storage
+  - Lab: Run an ML pipeline that reads/writes datasets from PVC/S3 inside Kubernetes
+- **module 6.5** — networking & service exposure
+  - ClusterIP, NodePort, LoadBalancer, and Ingress for ML services
+  - NGINX ingress controller setup
+  - Securing ML endpoints with TLS and authentication
+  - Internal vs public-facing ML APIs
+  - Lab: Deploy MLflow tracking server behind an NGINX ingress with TLS
+- **module 6.6** — configurations, secrets, and environment management
+  - ConfigMaps for environment-specific configs
+  - Secrets management with Kubernetes Secrets and AWS Secrets Manager
+  - Rolling updates with zero downtime for ML models
+  - Versioning model configurations
+  - Lab: Deploy a versioned ML model service that loads configs from a ConfigMap
+- **module 6.7** — observability for ML workloads in Kubernetes
+  - Integrating Prometheus & Grafana with Kubernetes metrics
+  - Collecting ML-specific metrics from pods (latency, throughput, drift)
+  - Logging with Loki or EFK stack
+  - Lab: Create a Grafana dashboard for an ML inference service deployed on EKS
+- **module 6.8** — CI/CD for Kubernetes MLOps
+  - GitHub Actions -> EKS deploy pipeline
+  - Canary and Blue/Green deployments for ML models
+  - Rollbacks on performance degradation
+  - Lab: Build a CI/CD pipeline that deploys a new model version to EKS and rolls back on SLO violation

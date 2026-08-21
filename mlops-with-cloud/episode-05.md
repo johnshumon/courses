@@ -1,0 +1,81 @@
+---
+tags: [ "mlops", "fraud-detection", "aws", "kafka", "feast", "mlflow", "prometheus", "grafana" ]
+title: episode-05
+---
+
+## Episode 05
+
+- **module 1** — project scaffolding, environment setup & cost guardrails
+  - Structuring the repository for an MLOps project (infra/, services/, features/, mlops/)
+  - Setting up pre-commit hooks, linting, and tests (ruff, black, pytest)
+  - AWS CLI profiles, SSM Parameter Store for secrets
+  - AWS Budgets and cost alerts for student environments
+  - Writing teardown scripts for resource cleanup
+- **module 2** — streaming infrastructure with Kafka on AWS EC2
+  - Deploying a 3-broker Kafka cluster on EC2 with schema registry
+  - Setting replication factor and ISR settings for fault tolerance
+  - Creating topics for transactions, scores, and dead letters
+  - Adding Kafka exporters for monitoring
+  - Schema evolution and compatibility tests
+- **module 3** — raw event storage (S3 + MongoDB)
+  - Streaming data ingestion from Kafka to S3 in partitioned Parquet format
+  - Setting up MongoDB replica set for low-latency recent lookups
+  - Configuring Kafka Connect S3 and Mongo sinks
+  - TTL indexes in Mongo for cost control
+  - Verifying data freshness and schema compliance
+- **module 4** — experiment tracking & model registry with MLflow
+  - Deploying MLflow on EC2 with RDS (PostgreSQL) backend and S3 artifact store
+  - Enabling TLS and authentication via Nginx reverse proxy
+  - Logging metrics, parameters, and artifacts from experiments
+  - Registering and versioning models in the MLflow Model Registry
+  - Integrating Prometheus metrics from MLflow
+- **module 5** — baseline model training & logging
+  - Loading IEEE-CIS fraud dataset from S3
+  - Performing time-based train-test splits to avoid leakage
+  - Handling class imbalance (class weights, resampling)
+  - Evaluating with PR-AUC, ROC-AUC, calibration curves
+  - Logging all runs to MLflow with reproducibility artifacts
+- **module 6** — feature store with Feast
+  - Defining entities, features, and TTL policies
+  - Using S3 for offline storage, Redis for online storage
+  - Materializing features and performing online lookups
+  - Integrating feature freshness and hit/miss metrics into Prometheus
+- **module 7** — real-time feature aggregation
+  - Implementing streaming aggregations (e.g., 5-min, 30-min transaction counts) with Kafka Streams or Faust
+  - Backfilling features for historical data
+  - Ensuring idempotency and correctness in streaming updates
+- **module 8** — model serving — streaming scoring service
+  - Building a Kafka consumer service to fetch features from Feast, score using MLflow model, publish scores to Kafka and S3
+  - Handle failed events with a dead-letter topic
+  - Performance tuning for p95 latency under 150ms
+- **module 9** — ad-hoc prediction API with FastAPI
+  - Implementing an API for investigation teams
+  - Single and batch prediction endpoints
+  - API key authentication and rate limiting
+  - Exposing Prometheus metrics for API health
+- **module 10** — containerization & deployment to AWS
+  - Containerizing all services with Docker
+  - Multi-arch builds (ARM/x86) for EC2 Graviton
+  - Pushing to AWS ECR with automated scans
+  - Deploying scoring service and API in an Auto Scaling Group with ALB
+- **module 11** — CI/CD for fraud detection services
+  - Building GitHub Actions workflows for building, testing, and deploying services
+  - Canary and blue/green deployments with AWS CodeDeploy
+  - Rollback strategies on latency/accuracy regression
+- **module 12** — monitoring & observability
+  - Setting up Prometheus on EC2 to scrape exporters from all components
+  - Grafana dashboards for: inference latency, Kafka consumer lag, feature freshness, model health metrics
+  - Alerting on SLO violations with Alertmanager + SNS/Slack
+- **module 13** — load testing & latency optimization
+  - Running load tests with Locust or k6
+  - Identifying bottlenecks in feature lookup, model scoring, or Kafka
+  - Tuning workers, connection pools, and caching layers
+- **module 14** — continual learning & drift detection
+  - Implementing Evidently AI for concept drift detection
+  - Triggering retraining pipelines on drift events
+  - Automating model evaluation gates before promotion
+- **module 15** — governance, explainability & cost intelligence
+  - Dataset and pipeline versioning with DVC
+  - Feature contract tests to prevent train-serve skew
+  - SHAP values for per-prediction explanations
+  - Tracking cost per 1K predictions and gating deployments if cost regresses

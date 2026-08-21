@@ -1,0 +1,53 @@
+---
+tags: [ "mlops", "data-engineering", "kafka", "spark", "airflow", "data-quality" ]
+title: episode-04
+---
+
+## Episode 04
+
+- **module 1** — data engineering concepts for MLOps
+  - The role of data engineering in production ML systems
+  - Batch vs streaming pipelines in ML use cases
+  - Latency, throughput, and freshness trade-offs
+  - Data schema evolution and governance for ML
+  - Common pitfalls (e.g., train-serve skew, stale features, poor data quality)
+- **module 2** — event streaming with Kafka
+  - Kafka architecture for ML: brokers, topics, partitions, replication
+  - Kafka KRaft vs ZooKeeper mode
+  - Designing topics for ML use cases (keying, partitioning, retention)
+  - Installing Kafka (local + AWS EC2)
+  - Producers & consumers in Python (confluent-kafka, aiokafka)
+  - Kafka Connect for ingestion (S3 sink, JDBC sink)
+  - Schema Registry (Avro/Protobuf/JSON) for ML feature contracts
+  - Metrics & monitoring (lag, ISR, partition skew)
+- **module 3** — batch processing with Apache Spark
+  - Spark fundamentals (RDD vs DataFrame API)
+  - Reading from S3, JDBC, and Kafka
+  - Transformations for ML (feature engineering in Spark)
+  - Writing partitioned Parquet to S3 for offline ML training
+  - Spark on AWS EMR vs standalone cluster on EC2
+  - Optimization techniques (partitioning, bucketing, caching)
+- **module 4** — streaming feature pipelines
+  - Use cases for streaming in ML (fraud detection, recommender freshness, real-time personalization)
+  - Building sliding window aggregations with Kafka Streams & Faust
+  - Joining real-time data with static reference datasets
+  - Handling late/out-of-order data
+  - Monitoring freshness & processing latency
+- **module 5** — data quality for ML
+  - Why ML needs stricter data quality checks
+  - Great Expectations for batch pipelines
+  - Pandera for Python dataframe validation
+  - Detecting drift at the data layer (statistical checks pre-model)
+  - Automated quality gates in CI/CD pipelines
+- **module 6** — workflow orchestration with Airflow
+  - Airflow basics: DAGs, tasks, scheduling, retries
+  - Setting up Airflow locally & on AWS EC2
+  - Integrating batch feature engineering with Airflow DAGs
+  - Sensors for data availability checks
+  - Airflow with KubernetesPodOperator for scalable ML jobs
+- **module 7** — integration with feature stores
+  - Role of feature stores in MLOps
+  - Connecting Kafka/Spark outputs to Feast
+  - Offline vs online stores (S3/Parquet vs Redis/Postgres)
+  - TTL & freshness guarantees
+  - Example: ingesting Spark output to Feast for model training & real-time lookup
