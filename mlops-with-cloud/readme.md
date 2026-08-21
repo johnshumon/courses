@@ -3,12 +3,11 @@ tags:
   - mlops
 title: mlops-with-cloud-season-2
 url: https://tahnik.notion.site/MLOps-with-Cloud-Season-2-Episodes-Modules-24d3eab61742805aa1e1f2f363dc7d33
-course-nav: https://tahnik.notion.site/Course-Content-Navigating-Doc-LIVE-MLOps-with-Cloud-S2-2c03eab61742800a9880dd0952498249
 ---
 ## episodes by modules
 
 ### episode 01 — MLOps & cloud foundations
-- **module 1** — experiment tracking & model metadata management (MLflow) [ ] 
+- **module 1** — experiment tracking & model metadata management (MLflow)
   - MLflow components: tracking, registry, models, projects
   - Deploy MLflow on AWS EC2 with RDS (Postgres) and S3 artifact storage
   - Authentication and TLS setup with Nginx reverse proxy
