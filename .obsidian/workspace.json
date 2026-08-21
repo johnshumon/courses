@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mlops-with-cloud/readme.md",
+                "file": "mlops-with-cloud/episode-01.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "episode-01"
             }
           }
         ]
@@ -172,10 +172,20 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "mlops-with-cloud/episode-1.png",
-    "mlops-with-cloud/episode-02.md",
-    "mlops-with-cloud/readme.md",
+    "mlops-with-cloud/episode-14.png",
+    "mlops-with-cloud/episode-13.png",
+    "mlops-with-cloud/episode-12.png",
+    "mlops-with-cloud/episode-11.png",
+    "mlops-with-cloud/episode-10.png",
+    "mlops-with-cloud/episode-09.png",
+    "mlops-with-cloud/episode-08.png",
+    "mlops-with-cloud/episode-07.png",
+    "mlops-with-cloud/episode-06.png",
+    "mlops-with-cloud/episode-05.png",
+    "mlops-with-cloud/episode-04.png",
     "mlops-with-cloud/episode-01.md",
+    "mlops-with-cloud/readme.md",
+    "mlops-with-cloud/episode-02.md",
     "mlops-with-cloud/episode-15.md",
     "mlops-with-cloud/episode-14.md",
     "mlops-with-cloud/episode-13.md",
@@ -200,10 +210,6 @@
     "mlops-with-cloud/misc/Episode-8-Distributed-Computing-for-ML-with-Ray.md",
     "mlops-with-cloud/misc",
     "LICENSE copy",
-    "Pasted image 20251121171845.png",
-    "mlops-with-cloud/scenarios/feature-store-with-aws-feast.svg",
-    "mlops-with-cloud/assigments/nw-ns-simulation/network-namespace-simulation.png",
-    "mlops-with-cloud/assigments/nw-ns-simulation/networking-namespaces-simulation.png",
     "mlops-with-cloud/assigments/nw-ns-simulation/Makefile",
     "mlops-with-cloud/assigments/nw-ns-simulation",
     "mlops-with-cloud/assigments/Makefile",

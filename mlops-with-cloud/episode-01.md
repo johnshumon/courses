@@ -3,7 +3,7 @@ tags: [ "mlops", "mlflow", "dvc", "feast", "fastapi", "cicd", "monitoring", "obs
 title: episode-01
 ---
 
-## Episode 01
+## episode 01
 
 - **module 1** — experiment tracking & model metadata management (MLflow)
   - MLflow components: tracking, registry, models, projects
@@ -38,4 +38,6 @@ title: episode-01
   - Dashboarding model accuracy, latency, drift indicators
   - Alerting with Alertmanager + SNS
 
-![episode-01](./episode-01.png)
+![episode-1 skills and impact](episode-01.png)
+
+
