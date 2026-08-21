@@ -3,7 +3,7 @@ tags: [ "mlops", "kubeflow", "kfserving", "katib", "orchestration" ]
 title: episode-07
 ---
 
-## Episode 07
+## episode 07
 
 - **module 8.1** — introduction to Kubeflow for MLOps
   - What is Kubeflow? Why it matters for production ML
@@ -45,3 +45,6 @@ title: episode-07
   - Exporting pipeline metrics to Prometheus/Grafana
   - Model performance monitoring in production
   - Drift detection integration with Evidently
+
+![episode-7 skills and impact](episode-07.png)
+

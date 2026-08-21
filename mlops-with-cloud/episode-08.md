@@ -3,7 +3,7 @@ tags: [ "mlops", "ray", "distributed-computing" ]
 title: episode-08
 ---
 
-## Episode 08
+## episode 08
 
 - **module 7.1** — introduction to Ray for MLOps
   - Why Ray? Scaling beyond single-node training
@@ -57,3 +57,6 @@ title: episode-08
   - Canary deployment for distributed inference
   - Rollbacks & scaling policies
   - Lab: Deploy an updated Ray Serve model to EKS using GitHub Actions
+
+![episode-8 skills and impact](episode-08.png)
+

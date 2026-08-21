@@ -3,7 +3,7 @@ tags: [ "mlops", "kubernetes", "k3s", "eks", "kubectl" ]
 title: episode-06
 ---
 
-## Episode 06
+## episode 06
 
 - **module 6.1** — kubernetes fundamentals for MLOps
   - Why Kubernetes is essential for modern ML pipelines
@@ -52,3 +52,6 @@ title: episode-06
   - Canary and Blue/Green deployments for ML models
   - Rollbacks on performance degradation
   - Lab: Build a CI/CD pipeline that deploys a new model version to EKS and rolls back on SLO violation
+
+![episode-6 skills and impact](episode-06.png)
+

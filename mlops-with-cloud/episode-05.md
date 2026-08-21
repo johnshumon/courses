@@ -3,7 +3,7 @@ tags: [ "mlops", "fraud-detection", "aws", "kafka", "feast", "mlflow", "promethe
 title: episode-05
 ---
 
-## Episode 05
+## episode 05
 
 - **module 1** — project scaffolding, environment setup & cost guardrails
   - Structuring the repository for an MLOps project (infra/, services/, features/, mlops/)
@@ -79,3 +79,6 @@ title: episode-05
   - Feature contract tests to prevent train-serve skew
   - SHAP values for per-prediction explanations
   - Tracking cost per 1K predictions and gating deployments if cost regresses
+
+![episode-5 skills and impact](episode-05.png)
+

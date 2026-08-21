@@ -3,7 +3,7 @@ tags: [ "mlops", "recommender-system", "kubeflow", "ray", "feast", "kfserving" ]
 title: episode-09
 ---
 
-## Episode 09
+## episode 09
 
 - **module 9.1** — problem definition & system architecture
   - Understanding recommendation problem types (content-based, collaborative filtering, hybrid)
@@ -45,3 +45,6 @@ title: episode-09
   - Automating retraining with new interaction data
   - Incorporating user feedback for model updates
   - Automating feature recalculation and deployment
+
+![episode-9 skills and impact](episode-09.png)
+

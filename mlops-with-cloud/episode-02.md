@@ -3,7 +3,7 @@ tags: [ "mlops", "aws", "ec2", "s3", "vpc", "terraform", "iac" ]
 title: episode-02
 ---
 
-## Episode 02
+## episode 02
 
 - **module 1** — AWS fundamentals for MLOps
   - AWS global infrastructure overview
@@ -30,3 +30,6 @@ title: episode-02
   - Modular infrastructure patterns
   - Using variables, workspaces, and state management
   - CI/CD for IaC
+
+![episode-2 skills and impact](episode-02.png)
+

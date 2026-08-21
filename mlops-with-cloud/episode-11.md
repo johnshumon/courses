@@ -3,7 +3,7 @@ tags: [ "mlops", "anomaly-detection", "aws", "kafka", "feast", "mlflow" ]
 title: episode-11
 ---
 
-## Episode 11
+## episode 11
 
 - **module 1** — project scaffolding, environment setup & cost guardrails
   - Repository structure for streaming anomaly detection (infra/, services/, features/, mlops/)
@@ -78,3 +78,6 @@ title: episode-11
   - Use Evidently AI for detecting concept drift & data drift
   - Retrain model automatically on confirmed drifts
   - Validate retrained model before promotion to production
+
+![episode-11 skills and impact](episode-11.png)
+

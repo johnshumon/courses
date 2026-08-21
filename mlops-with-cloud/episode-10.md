@@ -3,7 +3,7 @@ tags: [ "mlops", "deep-learning", "gpu", "tensorrt", "model-serving" ]
 title: episode-10
 ---
 
-## Episode 10
+## episode 10
 
 - **module 1** — deep learning fundamentals in the MLOps context
   - Why deep learning in production differs from academic DL
@@ -53,3 +53,6 @@ title: episode-10
   - Concept drift detection for DL models
   - Logging prediction explanations (e.g., Grad-CAM, SHAP for CNNs)
   - Triggering retraining workflows for DL models
+
+![episode-10 skills and impact](episode-10.png)
+

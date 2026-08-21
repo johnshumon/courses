@@ -3,7 +3,7 @@ tags: [ "mlops", "monitoring", "drift-detection", "security", "cost-management" 
 title: episode-15
 ---
 
-## Episode 15
+## episode 15
 
 - **module 1** — advanced monitoring & observability
   - Deep-dive into model-specific metrics: data drift, concept drift, model confidence calibration
@@ -45,3 +45,6 @@ title: episode-15
   - Creating reusable MLOps components (e.g., feature store connectors, alerting templates)
   - Setting up centralized ML observability dashboards across multiple projects
   - Shared data contracts for consistent schema validation across services
+
+![episode-15 skills and impact](episode-15.png)
+

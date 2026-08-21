@@ -3,7 +3,7 @@ tags: [ "mlops", "computer-vision", "ray", "tensorrt", "kfserving" ]
 title: episode-12
 ---
 
-## Episode 12
+## episode 12
 
 - **module 10.1** — problem definition & use cases
   - Common CV tasks: image classification, object detection, segmentation
@@ -58,3 +58,6 @@ title: episode-12
   - Updating TensorRT optimizations in retraining
   - Kubeflow Pipelines for automated retraining cycles
   - Lab: Create a Kubeflow retraining pipeline triggered by drift alerts
+
+![episode-12 skills and impact](episode-12.png)
+

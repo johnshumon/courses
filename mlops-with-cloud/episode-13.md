@@ -3,7 +3,7 @@ tags: [ "mlops", "nlp", "llm", "bert", "rag", "ray" ]
 title: episode-13
 ---
 
-## Episode 13
+## episode 13
 
 - **module 1** — project scaffolding, environment setup & cost guardrails
   - Repo structure for multi-model NLP project (infra/, datasets/, models/, pipelines/, services/)
@@ -61,3 +61,6 @@ title: episode-13
   - Automated feedback loops to capture real-world queries & responses
   - Daily incremental fine-tuning with Ray on recent data
   - Model validation before deployment to production
+
+![episode-13 skills and impact](episode-13.png)
+

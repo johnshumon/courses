@@ -3,7 +3,7 @@ tags: [ "mlops", "time-series", "forecasting", "edge-deployment", "mobile" ]
 title: episode-14
 ---
 
-## Episode 14
+## episode 14
 
 - **module 1** — project scaffolding, environment setup & cost guardrails
   - Repository layout for time series projects (infra/, data/, models/, pipelines/, services/)
@@ -61,3 +61,6 @@ title: episode-14
   - Using Evidently AI for detecting concept drift (seasonality changes, trends)
   - Triggering retraining workflows via Kubeflow Pipelines on drift detection
   - Automating data ingestion for retraining sets
+
+![episode-14 skills and impact](episode-14.png)
+

@@ -3,7 +3,7 @@ tags: [ "mlops", "docker", "containerization" ]
 title: episode-03
 ---
 
-## Episode 03
+## episode 03
 
 - **module 1** — docker fundamentals for ML workloads
   - What is containerization and why it matters in MLOps
@@ -41,3 +41,6 @@ title: episode-03
   - Reducing cold-start latency for ML APIs
   - Caching dependencies for faster builds
   - Handling container crashes and restart policies
+
+![episode-3 skills and impact](episode-03.png)
+

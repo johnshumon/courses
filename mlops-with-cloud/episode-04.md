@@ -3,7 +3,7 @@ tags: [ "mlops", "data-engineering", "kafka", "spark", "airflow", "data-quality"
 title: episode-04
 ---
 
-## Episode 04
+## episode 04
 
 - **module 1** — data engineering concepts for MLOps
   - The role of data engineering in production ML systems
@@ -51,3 +51,6 @@ title: episode-04
   - Offline vs online stores (S3/Parquet vs Redis/Postgres)
   - TTL & freshness guarantees
   - Example: ingesting Spark output to Feast for model training & real-time lookup
+
+![episode-4 skills and impact](episode-04.png)
+
