@@ -8,7 +8,7 @@ course-nav: https://tahnik.notion.site/Course-Content-Navigating-Doc-LIVE-MLOps-
 ## episodes by modules
 
 ### episode 01 — MLOps & cloud foundations
-- **module 1** — experiment tracking & model metadata management (MLflow)
+- **module 1** — experiment tracking & model metadata management (MLflow) [ ] 
   - MLflow components: tracking, registry, models, projects
   - Deploy MLflow on AWS EC2 with RDS (Postgres) and S3 artifact storage
   - Authentication and TLS setup with Nginx reverse proxy
@@ -42,9 +42,6 @@ course-nav: https://tahnik.notion.site/Course-Content-Navigating-Doc-LIVE-MLOps-
   - Alerting with Alertmanager + SNS
 
 ---
-
----
-
 ### episode 02 — AWS cloud infrastructure for ML
 - **module 1** — AWS fundamentals for MLOps
   - AWS global infrastructure overview
