@@ -11,14 +11,10 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mlops-with-cloud/episode-01.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "episode-01"
+              "title": "New tab"
             }
           }
         ]
@@ -172,6 +168,7 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "mlops-with-cloud/episode-01.md",
     "mlops-with-cloud/episode-14.png",
     "mlops-with-cloud/episode-13.png",
     "mlops-with-cloud/episode-12.png",
@@ -182,8 +179,6 @@
     "mlops-with-cloud/episode-07.png",
     "mlops-with-cloud/episode-06.png",
     "mlops-with-cloud/episode-05.png",
-    "mlops-with-cloud/episode-04.png",
-    "mlops-with-cloud/episode-01.md",
     "mlops-with-cloud/readme.md",
     "mlops-with-cloud/episode-02.md",
     "mlops-with-cloud/episode-15.md",
