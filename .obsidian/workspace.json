@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "acef32e2f7c5048a",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "a2935555e3912d23",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "mlops-with-cloud/episode-02.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "episode-02"
             }
           }
         ]
@@ -166,7 +170,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "a2935555e3912d23",
   "lastOpenFiles": [
     "mlops-with-cloud/episode-01.md",
     "mlops-with-cloud/episode-14.png",

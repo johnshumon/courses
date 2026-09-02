@@ -2,7 +2,6 @@
 tags: [ "mlops", "aws", "ec2", "s3", "vpc", "terraform", "iac" ]
 title: episode-02
 ---
-
 ## episode 02
 
 - **module 1** — AWS fundamentals for MLOps
