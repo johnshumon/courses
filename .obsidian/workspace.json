@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mlops-with-cloud/list-of-mlops-labs.md",
+                "file": "mlops-with-cloud/lab-mlflow-fundamentals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "list-of-mlops-labs"
+              "title": "lab-mlflow-fundamentals"
             }
           }
         ]
@@ -172,6 +172,7 @@
   },
   "active": "a2935555e3912d23",
   "lastOpenFiles": [
+    "mlops-with-cloud/list-of-mlops-labs.md",
     "mlops-with-cloud/readme.md",
     "mlops-with-cloud/episode-01.md",
     "mlops-with-cloud/episode-02.md",
