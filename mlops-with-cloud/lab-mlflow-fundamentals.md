@@ -27,7 +27,10 @@ $ source mlflow_fundamentals_env/bin/activate
 $ pip install mlflow scikit-learn
 
 # start mlflow tracking server
-$ mlflow server --host 0.0.0.0 --port 5000 --allowed-hosts '*' --cors-allowed-origins '*'
+$ `mlflow server --host 0.0.0.0 --port 5000 --allowed-hosts '*' --cors-allowed-origins '*'`
+
+# browse the mlflow server
+$ `2026/09/09 06:13:38 INFO:     Uvicorn running on http://0.0.0.0:5000`
 ```
 
 ```python
